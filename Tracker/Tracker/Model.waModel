@@ -1,1 +1,480 @@
-<?xml version="1.0" encoding="UTF-8"?><EntityModelCatalog><dbInfo uuid="DEB2380315EE8E47AF7052ECFC4FADBC" collation_locale="fr"/></EntityModelCatalog>
+﻿<?xml version="1.0" encoding="UTF-8"?><EntityModelCatalog>
+
+<dbInfo name="Model" uuid="DEB2380315EE8E47AF7052ECFC4FADBC"/>
+
+<dataClasses name="Action" className="Action" collectionName="Actions" scope="public" uuid="E2188DF1158F904A967D8003C2A19DF9" tablePos="6">
+
+	<extraProperties ____objectunic="true" panelColor="#D88CFF">
+
+		<panel ____objectunic="true" isOpen="false" pathVisible="true">
+
+			<position ____objectunic="true" X="31" Y="343"/>
+</panel>
+</extraProperties>
+
+	<attributes name="ID" kind="storage" scope="public" uuid="02359C647EB0234DB52ADAACE74DB142" fieldPos="1" unique="true" autosequence="true" type="long" primKey="true"/>
+
+	<attributes name="action_date" kind="storage" scope="public" uuid="8A19826EC7E56440B262FF202AAC1AC0" fieldPos="2" type="date"/>
+
+	<attributes name="actor" kind="storage" scope="public" uuid="A231B874B738044A966CAA42A4A96247" fieldPos="3" type="string"/>
+
+	<attributes name="action" kind="storage" scope="public" uuid="AB56DE9FD2E8184D89EEB157E7798D38" fieldPos="4" type="string"/>
+
+	<attributes name="type" kind="storage" scope="public" uuid="AC8BF5E32B1F9A44B245A139D5FB780B" fieldPos="5" type="string"/>
+
+	<attributes name="bill_action" kind="relatedEntity" scope="public" type="Bill" uuid="CA723A17C7167343B5EFB4A78FCB5327" fieldPos="6" path="Bill"/>
+
+</dataClasses>
+
+<dataClasses name="Bill" className="Bill" collectionName="Bills" scope="public" uuid="439CF17C3ABA5241A1ED093B6F706C0B" tablePos="5">
+
+	<extraProperties ____objectunic="true" panelColor="#D88CFF">
+
+		<panel ____objectunic="true" isOpen="false" pathVisible="true">
+
+			<position ____objectunic="true" X="22" Y="19"/>
+</panel>
+</extraProperties>
+
+	<attributes name="ID" kind="storage" scope="public" uuid="0DB36395EEDB2D48887B31DEC10A7C10" fieldPos="1" unique="true" autosequence="true" type="long" primKey="true"/>
+
+	<attributes name="title" kind="storage" scope="public" uuid="D584902DE5566C4AADEF17D36E4ADB61" fieldPos="2" type="string"/>
+
+	<attributes name="state" kind="relatedEntity" scope="public" type="StateMetadata" uuid="D5DBA4E2CE85AB47A0A4CAA8AC1F6D92" fieldPos="3" path="StateMetadata"/>
+
+	<attributes name="session" kind="relatedEntities" scope="public" type="Sessions" path="state.terms.sessions"/>
+
+	<attributes name="chamber" kind="storage" scope="public" uuid="B53346C164F65E49A648E2E3B8E10FE5" fieldPos="4" type="string"/>
+
+	<attributes name="alternate_titles" kind="storage" scope="public" uuid="BD1291FA6C6D604CA7CEBED5E9780575" fieldPos="5" type="string"/>
+
+	<attributes name="updated_at" kind="storage" scope="public" uuid="81826A902CCADF40BFE9FE3BBC5D0B41" fieldPos="6" type="date"/>
+
+	<attributes name="actions" kind="relatedEntities" scope="public" type="Actions" reversePath="true" path="bill_action"/>
+
+	<attributes name="sponsors" kind="relatedEntities" scope="public" type="Sponsors" reversePath="true" path="sponsor"/>
+
+	<attributes name="votes" kind="relatedEntities" scope="public" type="Votes" reversePath="true" path="vote"/>
+
+	<attributes name="versions" kind="relatedEntities" scope="public" type="Versions" reversePath="true" path="version"/>
+
+	<attributes name="billDocuments" kind="relatedEntities" scope="public" type="BillDocuments" reversePath="true" path="bill_document"/>
+
+	<attributes name="sources" kind="relatedEntities" scope="public" type="Sources" reversePath="true" path="sources"/>
+
+</dataClasses>
+
+<dataClasses name="BillDocument" className="BillDocument" collectionName="BillDocuments" scope="public" uuid="665880ECE85B6849888E62D99C1B97F9" tablePos="10">
+
+	<extraProperties ____objectunic="true" panelColor="#70CCC2">
+
+		<panel ____objectunic="true" isOpen="false" pathVisible="true">
+
+			<position ____objectunic="true" X="325" Y="20"/>
+</panel>
+</extraProperties>
+
+	<attributes name="ID" kind="storage" scope="public" uuid="B42D92E490463E4AA1F8C217124E671E" fieldPos="1" unique="true" autosequence="true" type="long" primKey="true"/>
+
+	<attributes name="url" kind="storage" scope="public" uuid="ED0EFFBFDEC5EA4D9E95B88D5841CC20" fieldPos="2" type="string"/>
+
+	<attributes name="name" kind="storage" scope="public" uuid="0E0FDC11DB17B44A9565F0CB14332DC6" fieldPos="3" type="string"/>
+
+	<attributes name="bill_document" kind="relatedEntity" scope="public" type="Bill" uuid="D2981A190BB9164A9DC58338DD83CAEC" fieldPos="4" path="Bill"/>
+
+</dataClasses>
+
+<dataClasses name="Committee" className="Committee" collectionName="Committees" scope="public" uuid="6F062951FA249D48BF171C1B6BD26DEF" tablePos="14">
+
+	<extraProperties ____objectunic="true" panelColor="#BFBFBF">
+
+		<panel ____objectunic="true" isOpen="false" pathVisible="true">
+
+			<position ____objectunic="true" X="10" Y="5"/>
+</panel>
+</extraProperties>
+
+	<attributes name="ID" kind="storage" scope="public" uuid="AA6AD462BAD40D4CA4858A2D1A573D7D" fieldPos="1" unique="true" autosequence="true" type="long" primKey="true"/>
+
+	<attributes name="committee_id" kind="storage" scope="public" uuid="F225FBF01D67ED40986C38CC1BAF8566" fieldPos="2" type="string"/>
+
+	<attributes name="state" kind="relatedEntity" scope="public" type="StateMetadata" uuid="A4C697BBA8653A4C8DAA5255EB6739CA" fieldPos="3" path="StateMetadata"/>
+
+	<attributes name="committee" kind="storage" scope="public" uuid="7CFDB03569F33441A035800E8642BD23" fieldPos="4" type="string"/>
+
+	<attributes name="subcommitee" kind="storage" scope="public" uuid="B3151F59B58F544BACCDA0ABA5D47190" fieldPos="5" type="string"/>
+
+	<attributes name="parent_id" kind="storage" scope="public" uuid="EEF50357D25A4B428CB817687EE71E3E" fieldPos="6" type="string"/>
+
+	<attributes name="legislators" kind="relatedEntities" scope="public" type="Legislators" reversePath="true" path="committees"/>
+
+	<attributes name="role" kind="storage" scope="public" uuid="82194D43F72B4B48804630D59C321794" fieldPos="7" type="string"/>
+
+	<attributes name="leg_id" kind="storage" scope="public" uuid="4E57828F0C23A34D89C10616DB37AAD6" fieldPos="8" type="string"/>
+
+	<attributes name="sources" kind="relatedEntities" scope="public" type="Sources" reversePath="true" path="committee_sources"/>
+
+</dataClasses>
+
+<dataClasses name="Event" className="Event" collectionName="Events" scope="public" uuid="ABFCB1D1B7B1B14887E673FEDF956F05" tablePos="15">
+
+	<extraProperties ____objectunic="true" panelColor="#D7E3BC">
+
+		<panel ____objectunic="true" isOpen="false" pathVisible="true">
+
+			<position ____objectunic="true" X="37" Y="7"/>
+</panel>
+</extraProperties>
+
+	<attributes name="ID" kind="storage" scope="public" uuid="D9A2700E66815C49BEA9BC90799539F1" fieldPos="1" unique="true" autosequence="true" type="long" primKey="true"/>
+
+	<attributes name="event_id" kind="storage" scope="public" uuid="1BE701CA3BAC5E4A9EE5BB4DAEE0FE33" fieldPos="2" type="string"/>
+
+	<attributes name="description" kind="storage" scope="public" uuid="B32E0535AE096B4297E9CFBB7B00FA4B" fieldPos="3" type="string"/>
+
+	<attributes name="when" kind="storage" scope="public" uuid="F07D09E77C443A4AA329E671C73095C2" fieldPos="4" type="date"/>
+
+	<attributes name="end" kind="storage" scope="public" uuid="B5A6BA5D1803664B8BAF60A63D09265B" fieldPos="5" type="date"/>
+
+	<attributes name="event_location" kind="storage" scope="public" uuid="445B62C6DA738C40B9568838F8EB3C7F" fieldPos="6" type="string"/>
+
+	<attributes name="type" scope="public" uuid="6C560EA8A7A8EE4580529C9524F52E19" fieldPos="7" type="string" kind="storage"/>
+
+	<attributes name="sources" scope="public" reversePath="true" path="event_sources" type="Sources" kind="relatedEntities"/>
+
+	<attributes name="participants" scope="public" reversePath="true" path="participants" type="Participants" kind="relatedEntities"/>
+
+</dataClasses>
+
+<dataClasses name="Feature_flag" className="Feature_flag" collectionName="Feature_flags" scope="public" uuid="6E22EE0F58691D49B0317E37FC04A426" tablePos="4">
+
+	<extraProperties ____objectunic="true" panelColor="#4FA997">
+
+		<panel ____objectunic="true" isOpen="false" pathVisible="true">
+
+			<position ____objectunic="true" X="310" Y="255"/>
+</panel>
+</extraProperties>
+
+	<attributes name="ID" kind="storage" scope="public" uuid="19CEB1E3CF43F545B126772053759A95" fieldPos="1" unique="true" autosequence="true" type="long" primKey="true"/>
+
+	<attributes name="events" kind="storage" scope="public" uuid="C8530A4FF051E64D8F10380EDF2A20D2" fieldPos="2" type="string"/>
+
+	<attributes name="subjects" kind="storage" scope="public" uuid="52C797868CB0444ABE7A1EC0F2CBB737" fieldPos="3" type="string"/>
+
+	<attributes name="feature_flags" kind="relatedEntity" scope="public" type="StateMetadata" uuid="AF58DD33B59D5B45BDBF3EEFB85B1D90" fieldPos="4" path="StateMetadata"/>
+
+</dataClasses>
+
+<dataClasses name="Legislator" className="Legislator" collectionName="Legislators" scope="public" uuid="8CC1C1D16576B7449900F1B63329F474" tablePos="12">
+
+	<extraProperties ____objectunic="true" panelColor="#BFBFBF">
+
+		<panel ____objectunic="true" isOpen="true" pathVisible="true">
+
+			<position ____objectunic="true" X="263" Y="5"/>
+</panel>
+</extraProperties>
+
+	<attributes name="ID" kind="storage" scope="public" uuid="15705442ED749045AD04EB66665CC04F" fieldPos="1" unique="true" autosequence="true" type="long" primKey="true"/>
+
+	<attributes name="leg_id" kind="storage" scope="public" uuid="A413C58BFAB10C4D9299D300CBC59B98" fieldPos="2" type="string"/>
+
+	<attributes name="full_name" kind="storage" scope="public" uuid="D531543176B2904AA1768A09D33DE080" fieldPos="3" type="string"/>
+
+	<attributes name="first_name" kind="storage" scope="public" uuid="D27F2F4D5C61E6488C81D9FE4379F799" fieldPos="4" type="string"/>
+
+	<attributes name="last_name" kind="storage" scope="public" uuid="D5254922B6C4A64F8DBACF5DA7190500" fieldPos="5" type="string"/>
+
+	<attributes name="middle_name" kind="storage" scope="public" uuid="AB88D44A59715C44B1A269E60538717C" fieldPos="6" type="string"/>
+
+	<attributes name="suffixes" kind="storage" scope="public" uuid="15BFDC3BE79B1448A23369468BB272EE" fieldPos="7" type="string"/>
+
+	<attributes name="url" kind="storage" scope="public" uuid="0E9E8540354B1348BEFACCCA419095E1" fieldPos="8" type="string"/>
+
+	<attributes name="email" kind="storage" scope="public" uuid="B73AEDB0F3AEFB40BF7C3740DD33734B" fieldPos="9" type="string"/>
+
+	<attributes name="photo_url" kind="storage" scope="public" uuid="61540028E910F3458122A1D31B5238C9" fieldPos="10" type="string"/>
+
+	<attributes name="active" kind="storage" scope="public" uuid="8FB2CBAE9F4D2F459A98B13438D9F66B" fieldPos="11" type="bool"/>
+
+	<attributes name="state" kind="storage" scope="public" uuid="346662D487443949845C69F1B9DB36CE" fieldPos="12" type="string"/>
+
+	<attributes name="chamber" kind="storage" scope="public" uuid="E006624D20A500409590B13B46182F29" fieldPos="13" type="string"/>
+
+	<attributes name="district" kind="storage" scope="public" uuid="83989F0E133863488C9046E2D72C5CBF" fieldPos="14" type="string"/>
+
+	<attributes name="party" kind="storage" scope="public" uuid="999E67EBAE6E9A40A2DE501EB50C88AA" fieldPos="15" type="string"/>
+
+	<attributes name="roles" kind="relatedEntities" scope="public" type="Roles" reversePath="true" path="roles"/>
+
+	<attributes name="sources" kind="relatedEntities" scope="public" type="Sources" reversePath="true" path="bill_sources"/>
+
+	<attributes name="committees" kind="relatedEntity" scope="public" type="Committee" uuid="02C81A4D143C2543949C7BED61B1A346" fieldPos="16" path="Committee"/>
+
+	<attributes name="districts" scope="public" uuid="95A1C3CEA90DD44FB2F44F2A550279CF" fieldPos="17" type="District" kind="relatedEntity" path="District"/>
+
+</dataClasses>
+
+<dataClasses name="Role" className="Role" collectionName="Roles" scope="public" uuid="31C3C1A48DD2CF4C9FE439445E9AFA0C" tablePos="13">
+
+	<extraProperties ____objectunic="true" panelColor="#996699">
+
+		<panel ____objectunic="true" isOpen="false" pathVisible="true">
+
+			<position ____objectunic="true" X="159" Y="51"/>
+</panel>
+</extraProperties>
+
+	<attributes name="ID" kind="storage" scope="public" uuid="DCC7BF2D5079B94595965C35E5ECF30E" fieldPos="1" unique="true" autosequence="true" type="long" primKey="true"/>
+
+	<attributes name="type" kind="storage" scope="public" uuid="A8F944CF9018834ABD61B31FEC3B1911" fieldPos="2" type="string"/>
+
+	<attributes name="term" kind="storage" scope="public" uuid="98A43361EB6D114DBFD4ED34C52A3405" fieldPos="3" type="string"/>
+
+	<attributes name="chamber" kind="storage" scope="public" uuid="37F658FAE34DCE468D98E1486B49D333" fieldPos="4" type="string"/>
+
+	<attributes name="district" kind="storage" scope="public" uuid="F140B0378E9EC64F90D132CCB36B4651" fieldPos="5" type="string"/>
+
+	<attributes name="party" kind="storage" scope="public" uuid="16BB8B89FE5F0243B5470929E0F6478C" fieldPos="6" type="string"/>
+
+	<attributes name="committee" kind="storage" scope="public" uuid="7C71E67FC151DB47A119385C9ED3F209" fieldPos="7" type="string"/>
+
+	<attributes name="legislator_term" kind="storage" scope="public" uuid="42EF88EAD2BE8E4D981FAFDE5B79C336" fieldPos="8" type="string"/>
+
+	<attributes name="roles" kind="relatedEntity" scope="public" type="Legislator" uuid="305BC374BE4EBB40AAFF0E86397B7463" fieldPos="9" path="Legislator"/>
+
+	<attributes name="old" kind="storage" scope="public" uuid="63E37CDB8E50024C8004E402B5BB8170" fieldPos="10" type="bool"/>
+
+</dataClasses>
+
+<dataClasses name="Session_detail" className="Session_detail" collectionName="Sessions" scope="public" uuid="6D2A841A2A6FE044B80E6A9756715DF0" tablePos="3">
+
+	<extraProperties ____objectunic="true" panelColor="#996699">
+
+		<panel ____objectunic="true" isOpen="false" pathVisible="true">
+
+			<position ____objectunic="true" X="603" Y="28"/>
+</panel>
+</extraProperties>
+
+	<attributes name="ID" kind="storage" scope="public" uuid="16F4262D9CB63E44A5AF5DA9522696A0" fieldPos="1" unique="true" autosequence="true" type="long" primKey="true"/>
+
+	<attributes name="display_name" kind="storage" scope="public" uuid="D6E368444FCBD842A2BF6D9DD685E296" fieldPos="2" type="string"/>
+
+	<attributes name="session_detail" kind="relatedEntity" scope="public" type="Term" uuid="4E81FF7A1653184EA6C1064C6D6AD1CB" fieldPos="3" path="Term"/>
+
+</dataClasses>
+
+<dataClasses name="Source" className="Source" collectionName="Sources" scope="public" uuid="E4C587F78FFC374EA06DF82D940F50E1" tablePos="11">
+
+	<extraProperties ____objectunic="true" panelColor="#eee">
+
+		<panel ____objectunic="true" isOpen="false" pathVisible="true">
+
+			<position ____objectunic="true" X="216" Y="5"/>
+</panel>
+</extraProperties>
+
+	<attributes name="ID" kind="storage" scope="public" uuid="8FC73311418E08478ED8DC21378F3BE2" fieldPos="1" unique="true" autosequence="true" type="long" primKey="true"/>
+
+	<attributes name="url" kind="storage" scope="public" uuid="65B5726634637A428D0E2036578D3383" fieldPos="2" type="string"/>
+
+	<attributes name="sources" kind="relatedEntity" scope="public" type="Bill" uuid="235B12DD0A9F0745A7E12ED96CBF9A86" fieldPos="3" path="Bill"/>
+
+	<attributes name="bill_sources" kind="relatedEntity" scope="public" type="Legislator" uuid="EF36D0F2980E38438DCEDF3166C34751" fieldPos="5" path="Legislator"/>
+
+	<attributes name="committee_sources" kind="relatedEntity" scope="public" type="Committee" uuid="B49468FCF04FFE45A0B6F8DCA8B03AC1" fieldPos="4" path="Committee"/>
+
+	<attributes name="event_sources" scope="public" uuid="708314B82AD9B84BA7C698AA99BE1A27" fieldPos="6" path="Event" type="Event" kind="relatedEntity"/>
+
+</dataClasses>
+
+<dataClasses name="Sponsor" className="Sponsor" collectionName="Sponsors" scope="public" uuid="5DAE7B8E0398E2469259876E92F2C7BD" tablePos="7">
+
+	<extraProperties ____objectunic="true" panelColor="#D8D8D8">
+
+		<panel ____objectunic="true" isOpen="false" pathVisible="true">
+
+			<position ____objectunic="true" X="326" Y="16"/>
+</panel>
+</extraProperties>
+
+	<attributes name="ID" kind="storage" scope="public" uuid="F5CBF52A8A72CC4D9F5026251713F594" fieldPos="1" unique="true" autosequence="true" type="long" primKey="true"/>
+
+	<attributes name="leg_id" kind="storage" scope="public" uuid="E5BA14C3BB9A634F9167E65CE8351CF7" fieldPos="2" type="string"/>
+
+	<attributes name="name" kind="storage" scope="public" uuid="DEE125ED8787B143B951246C7DBD29A6" fieldPos="3" type="string"/>
+
+	<attributes name="type" kind="storage" scope="public" uuid="CED2506A4AED784DB4C4398D1E720BF2" fieldPos="4" type="string"/>
+
+	<attributes name="sponsor" kind="relatedEntity" scope="public" type="Bill" uuid="E85372119D3EF64EBCB63AF0B171E479" fieldPos="5" path="Bill"/>
+
+</dataClasses>
+
+<dataClasses name="StateMetadata" className="StateMetadata" collectionName="States" scope="public" uuid="47E70BA8E6C9A74ABFB4DD663421CBA3" tablePos="1">
+
+	<extraProperties ____objectunic="true" panelColor="#70CCC2">
+
+		<panel ____objectunic="true" isOpen="false" pathVisible="true">
+
+			<position ____objectunic="true" X="282" Y="9"/>
+</panel>
+</extraProperties>
+
+	<attributes name="ID" kind="storage" scope="public" uuid="701DDE3640302E4F8DCE7537BEDB7604" fieldPos="1" unique="true" autosequence="true" type="long" primKey="true"/>
+
+	<attributes name="name" kind="storage" scope="public" uuid="7E3F4CA57C6425469C821DDAEB7B703C" fieldPos="2" type="string"/>
+
+	<attributes name="abbreviation" kind="storage" scope="public" uuid="14AF1C60658C8F4FBDEA53E2D9DCFDC0" fieldPos="3" type="string"/>
+
+	<attributes name="legislature_name" kind="storage" scope="public" uuid="21C2E6566A5BA641A93B16097EE0E36C" fieldPos="4" type="string"/>
+
+	<attributes name="upper_chamber_name" kind="storage" scope="public" uuid="0A65E7DF05EBC342B286988EAE8DE26F" fieldPos="5" type="string"/>
+
+	<attributes name="lower_chamber_name" kind="storage" scope="public" uuid="C300CD52F573C648972789FC654B3B80" fieldPos="6" type="string"/>
+
+	<attributes name="upper_chamber_term" kind="storage" scope="public" uuid="D144596918C0D145A226AA09DD5CF4AC" fieldPos="7" type="number"/>
+
+	<attributes name="lower_chamber_term" kind="storage" scope="public" uuid="F22EDA2C23D4984F906C5A4D6AED7D75" fieldPos="8" type="number"/>
+
+	<attributes name="upper_chamber_title" kind="storage" scope="public" uuid="C8A1B96321D7274CA70B734D3FF76A8A" fieldPos="9" type="string"/>
+
+	<attributes name="lower_chamber_title" kind="storage" scope="public" uuid="84FBD4598BCCE946A8D8C99A858072BF" fieldPos="10" type="string"/>
+
+	<attributes name="latest_dump_url" kind="storage" scope="public" uuid="BB0BF4DACD8D84418BA53FA532BE8264" fieldPos="11" type="string"/>
+
+	<attributes name="latest_dump_date" kind="storage" scope="public" uuid="8221D2547DB52F4894C9369A2096CB15" fieldPos="12" type="string"/>
+
+	<attributes name="terms" kind="relatedEntities" scope="public" type="Terms" reversePath="true" path="state"/>
+
+	<attributes name="feature_flags" kind="relatedEntities" scope="public" type="Feature_flags" reversePath="true" path="feature_flags"/>
+
+	<attributes name="bills" kind="relatedEntities" scope="public" type="Bills" reversePath="true" path="state"/>
+
+	<attributes name="committees" kind="relatedEntities" scope="public" type="Committees" reversePath="true" path="state"/>
+
+</dataClasses>
+
+<dataClasses name="Term" className="Term" collectionName="Terms" scope="public" uuid="3E5B148AA4AC514593231DB1B997F19E" tablePos="2">
+
+	<extraProperties ____objectunic="true" panelColor="#70CCC2">
+
+		<panel ____objectunic="true" isOpen="false" pathVisible="true">
+
+			<position ____objectunic="true" X="239" Y="132"/>
+</panel>
+</extraProperties>
+
+	<attributes name="ID" kind="storage" scope="public" uuid="5529DB5836CA0E4CB54D14C0C3613E63" fieldPos="1" unique="true" autosequence="true" type="long" primKey="true"/>
+
+	<attributes name="start_year" kind="storage" scope="public" uuid="1D7753D24E54374ABDC6AD5F6E44944A" fieldPos="2" type="date"/>
+
+	<attributes name="end_year" kind="storage" scope="public" uuid="CC813513729D9741963276846C73549B" fieldPos="3" type="date"/>
+
+	<attributes name="name" kind="storage" scope="public" uuid="8190205226FDCE4EA60DDC0EFEA00609" fieldPos="4" type="string"/>
+
+	<attributes name="state" kind="relatedEntity" scope="public" type="StateMetadata" uuid="B0A455934257E9438CEF35ABF8575CCB" fieldPos="5" path="StateMetadata"/>
+
+	<attributes name="sessions" kind="relatedEntities" scope="public" type="Sessions" reversePath="true" path="session_detail"/>
+
+</dataClasses>
+
+<dataClasses name="Version" className="Version" collectionName="Versions" scope="public" uuid="371B85805F7C2F479BB702C5226C9B66" tablePos="9">
+
+	<extraProperties ____objectunic="true" panelColor="#C4BD97">
+
+		<panel ____objectunic="true" isOpen="false" pathVisible="true">
+
+			<position ____objectunic="true" X="319" Y="19"/>
+</panel>
+</extraProperties>
+
+	<attributes name="ID" kind="storage" scope="public" uuid="D553D30A6B0DE7479A01DC20424BA306" fieldPos="1" unique="true" autosequence="true" type="long" primKey="true"/>
+
+	<attributes name="url" kind="storage" scope="public" uuid="2F0509F9CBCFD548A1A015D06BB2112E" fieldPos="2" type="string"/>
+
+	<attributes name="name" kind="storage" scope="public" uuid="597DB05957F7A34490041DEFA5AF8ADF" fieldPos="3" type="string"/>
+
+	<attributes name="version" kind="relatedEntity" scope="public" type="Bill" uuid="01530442E39D4B4B8C7297BF7A4D87A6" fieldPos="4" path="Bill"/>
+
+</dataClasses>
+
+<dataClasses name="Vote" className="Vote" collectionName="Votes" scope="public" uuid="AC6269E16EF20341ACF7DCB97FB25728" tablePos="8">
+
+	<extraProperties ____objectunic="true" panelColor="#BFBFBF">
+
+		<panel ____objectunic="true" isOpen="false" pathVisible="true">
+
+			<position ____objectunic="true" X="323" Y="19"/>
+</panel>
+</extraProperties>
+
+	<attributes name="ID" kind="storage" scope="public" uuid="5ECB0C1837D1234FAF4D8DCAB0A80C9C" fieldPos="1" unique="true" autosequence="true" type="long" primKey="true"/>
+
+	<attributes name="vote_date" kind="storage" scope="public" uuid="168E60CFA984D5428E4EE1931AFD1AC2" fieldPos="2" type="date"/>
+
+	<attributes name="chamber" kind="storage" scope="public" uuid="5B615F5826F26D48B190B73F07E73B5C" fieldPos="3" type="string"/>
+
+	<attributes name="yes_count" kind="storage" scope="public" uuid="188635755FC95A429252C5361B42EF18" fieldPos="4" type="number"/>
+
+	<attributes name="no_count" kind="storage" scope="public" uuid="EF12E3CFC70EBA44912195625F8E8F12" fieldPos="5" type="number"/>
+
+	<attributes name="other_count" kind="storage" scope="public" uuid="8F6A9FE839A6054784A7EB8F2646623C" fieldPos="6" type="number"/>
+
+	<attributes name="passed" kind="storage" scope="public" uuid="E5BE73EE9B674348AA87BBD742653671" fieldPos="7" type="bool"/>
+
+	<attributes name="type" kind="storage" scope="public" uuid="CC0E98AAEA9F6044A170CC8EAF99C2CE" fieldPos="8" type="string"/>
+
+	<attributes name="vote" kind="relatedEntity" scope="public" type="Bill" uuid="30D081CB6D11534D94D536ED95FE33B9" fieldPos="9" path="Bill"/>
+
+</dataClasses>
+
+<dataClasses collectionName="Participants" className="Participant" uuid="925A876912EA6945BDBC41547B8CAC6B" tablePos="16">
+
+	<extraProperties ____objectunic="true" panelColor="#8DB3E2">
+
+		<panel ____objectunic="true" isOpen="false" pathVisible="true">
+
+			<position ____objectunic="true" X="305" Y="20"/>
+
+		</panel>
+
+	</extraProperties>
+
+	<attributes name="ID" kind="storage" type="long" uuid="A96BFA349E0D9B4CBFD3CEC17AB3A611" fieldPos="1" autosequence="true" unique="true" primKey="true"/>
+
+	<attributes name="type" scope="public" uuid="2D85628D5AB98F40B9476437BAAF7789" fieldPos="2" type="string" kind="storage"/>
+
+	<attributes name="participant" scope="public" uuid="713088A18526F847BB127EE68B29A01D" fieldPos="3" type="string" kind="storage"/>
+
+	<attributes name="participants" scope="public" uuid="D080C6B652373F4FA39E24BDAE6CC112" fieldPos="4" path="Event" type="Event" kind="relatedEntity"/>
+
+</dataClasses>
+
+<dataClasses collectionName="Districts" className="District" uuid="1D44B017FECEE14C8318A392C6000A64" tablePos="17">
+
+	<extraProperties ____objectunic="true" panelColor="#CCC1D9">
+
+		<panel ____objectunic="true" isOpen="true" pathVisible="true">
+
+			<position ____objectunic="true" X="17" Y="21"/>
+
+		</panel>
+
+	</extraProperties>
+
+	<attributes name="ID" kind="storage" type="long" uuid="AB50C2BDBDA09E4992131E36DCE01E93" fieldPos="1" autosequence="true" unique="true" primKey="true"/>
+
+	<attributes name="name" scope="public" uuid="DA59276D4B32814AAF2E3F57087F810A" fieldPos="2" type="string" kind="storage"/>
+
+	<attributes name="chamber" scope="public" uuid="E0E4A8E5A88EC14D8B9D8E8139EE069F" fieldPos="3" type="string" kind="storage"/>
+
+	<attributes name="num_seats" scope="public" uuid="9DB684DD431ECC46BF151D47A7F7FC7B" fieldPos="4" type="number" kind="storage"/>
+
+	<attributes name="boundary_id" scope="public" uuid="1F009770656F5D41BA9F484A657E7684" fieldPos="5" type="string" kind="storage"/>
+
+	<attributes name="legislators" scope="public" reversePath="true" path="districts" type="Legislators" kind="relatedEntities"/>
+
+</dataClasses>
+</EntityModelCatalog>
