@@ -145,8 +145,12 @@ return jObj;
 function SaveStateMeta(varURL) {
 	
 	var result=RetrieveData(varURL).result;
-	var StateMeta= ds.StateMetadata.createEntity();
+	//look for existing record
+	StateMeta=ds.StateMetadata.find('id= :1', result.id)
+	if (StateMeta == null)
+	{StateMeta= ds.StateMetadata.createEntity();
 	StateMeta.id=result.id;
+	}
 	StateMeta.name=result.name;
 	StateMeta.abbreviation=result.abbreviation;
 	StateMeta.legislature_name=result.legislature_name;
@@ -158,9 +162,22 @@ function SaveStateMeta(varURL) {
 	StateMeta.lower_chamber_title=result.lower_chamber_title;
 	StateMeta.latest_dump_url=result.latest_json_url;
 	StateMeta.latest_dump_date=result.latest_json_date;
+	
 	StateMeta.save();		
 	
 	//Term related records
+	//Remove old records first
+
+	
+	Sessionz = ds.Session_detail.query('session_detail.state.id= :1', result.id)
+	if (Sessionz) {Sessionz.remove();}
+	
+	Flags = ds.Feature_flag.query('feature_flags.id= :1', result.id)
+	if (Flags) {Flags.remove();}
+	
+	StateTerm=ds.Term.query('state.id= :1', result.id)
+	if (StateTerm) {StateTerm.remove();} 
+	
 	for (var t in result.terms) 
 	{
 		Term(result.terms[t], StateMeta)
@@ -171,28 +188,22 @@ function SaveStateMeta(varURL) {
 	{
 		FeatureFlags(result.feature_flags[t], StateMeta)
 	}
-	/*
-	//OGFeatureFlag related records
-	for (var t in result.feature_flags) 
-	{
-		OGFlag(result.feature_flags[t], RelID, StateMeta)
-	}*/
 	
 
 }
 
 function Term(r, StateMeta) {
-		StateTerm = new ds.Term({
-			start_year:r.start_year,
-			end_year:r.end_year,
-			name:r.name})
-		StateTerm.state=StateMeta;
-		StateTerm.save();
+	StateTerm= ds.Term.createEntity();	
+	StateTerm.start_year=r.start_year;
+	StateTerm.end_year=r.end_year;
+	StateTerm.name=r.name;
+	StateTerm.state=StateMeta;
+	StateTerm.save();
 		
-		for (var t in r.sessions) 
-		{
-		Session(r.sessions[t], StateTerm)
-		}
+	for (var t in r.sessions) 
+	{
+	SessionX(r.sessions[t], StateTerm)
+	}
 }
 
 
@@ -203,7 +214,7 @@ function FeatureFlags(r, StateMeta) {
 		Flag.save();
 }
 
-function Session(session, StateTerm) {
+function SessionX(session, StateTerm) {
 		StateSession = new ds.Session_detail({
 			display_name:session
 			})
@@ -230,6 +241,7 @@ function ClearOpenStateData() {
 		var vName= Table_List[t];
 		counter=ds.dataClasses[vName];
 		counter.remove();
+		counter.setAutoSequenceNumber(1);
 	}
 }
 
@@ -252,9 +264,16 @@ function GetKeys(obj) {
 
 //StringMaker()
 function TestData(){
-var v="http://openstates.org/api/v1/metadata/ma/?apikey=";
-var w= v + require('openstates.api_key').openstates_api_key();
-SaveStateMeta(w);
+	for (var key in STATE_LIST){
+		state =key;
+		v="http://openstates.org/api/v1/metadata/" + state + "/?apikey=";
+		w= v + require('openstates.api_key').openstates_api_key();
+		SaveStateMeta(w);
+		}	
+	
+//var v="http://openstates.org/api/v1/metadata/ma/?apikey=";
+//var w= v + require('openstates.api_key').openstates_api_key();
+//SaveStateMeta(w);
 }
 //var x = RetrieveData(w).result;
 //var y = GetKeys(x[0]);
