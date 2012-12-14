@@ -134,7 +134,7 @@
 </panel>
 </extraProperties>
 
-	<attributes name="ID" kind="storage" scope="public" uuid="AB50C2BDBDA09E4992131E36DCE01E93" fieldPos="1" unique="true" autosequence="true" type="long" primKey="true"/>
+	<attributes name="ID" kind="storage" scope="public" uuid="AB50C2BDBDA09E4992131E36DCE01E93" fieldPos="1" unique="true" autosequence="true" type="long"/>
 
 	<attributes name="name" kind="storage" scope="public" uuid="DA59276D4B32814AAF2E3F57087F810A" fieldPos="2" type="string"/>
 
@@ -145,6 +145,8 @@
 	<attributes name="boundary_id" kind="storage" scope="public" uuid="1F009770656F5D41BA9F484A657E7684" fieldPos="5" type="string"/>
 
 	<attributes name="legislators" kind="relatedEntities" scope="public" type="Legislators" reversePath="true" path="districts"/>
+
+	<key name="ID"/>
 
 </dataClasses>
 
@@ -184,21 +186,17 @@
 
 	<extraProperties ____objectunic="true" panelColor="#4FA997">
 
-		<panel ____objectunic="true" isOpen="false" pathVisible="true">
+		<panel ____objectunic="true" isOpen="true" pathVisible="true">
 
 			<position ____objectunic="true" X="310" Y="255"/>
 </panel>
 </extraProperties>
 
-	<attributes name="ID" kind="storage" scope="public" uuid="19CEB1E3CF43F545B126772053759A95" fieldPos="1" unique="true" autosequence="true" type="long"/>
-
-	<attributes name="events" kind="storage" scope="public" uuid="C8530A4FF051E64D8F10380EDF2A20D2" fieldPos="2" type="string"/>
+	<attributes name="ID" kind="storage" scope="public" uuid="19CEB1E3CF43F545B126772053759A95" fieldPos="1" unique="true" autosequence="true" type="long" primKey="true"/>
 
 	<attributes name="subjects" kind="storage" scope="public" uuid="52C797868CB0444ABE7A1EC0F2CBB737" fieldPos="3" type="string"/>
 
 	<attributes name="feature_flags" kind="relatedEntity" scope="public" type="StateMetadata" uuid="AF58DD33B59D5B45BDBF3EEFB85B1D90" fieldPos="4" path="StateMetadata"/>
-
-	<key name="ID"/>
 
 </dataClasses>
 
@@ -212,7 +210,7 @@
 </panel>
 </extraProperties>
 
-	<attributes name="ID" kind="storage" scope="public" uuid="15705442ED749045AD04EB66665CC04F" fieldPos="1" unique="true" autosequence="true" type="long" primKey="true"/>
+	<attributes name="ID" kind="storage" scope="public" uuid="15705442ED749045AD04EB66665CC04F" fieldPos="1" unique="true" autosequence="true" type="long"/>
 
 	<attributes name="leg_id" kind="storage" scope="public" uuid="A413C58BFAB10C4D9299D300CBC59B98" fieldPos="2" type="string"/>
 
@@ -249,6 +247,8 @@
 	<attributes name="committees" kind="relatedEntity" scope="public" type="Committee" uuid="02C81A4D143C2543949C7BED61B1A346" fieldPos="16" path="Committee"/>
 
 	<attributes name="districts" kind="relatedEntity" scope="public" type="District" uuid="95A1C3CEA90DD44FB2F44F2A550279CF" fieldPos="17" path="District"/>
+
+	<key name="ID"/>
 
 </dataClasses>
 
@@ -312,19 +312,17 @@
 
 	<extraProperties ____objectunic="true" panelColor="#996699">
 
-		<panel ____objectunic="true" isOpen="false" pathVisible="true">
+		<panel ____objectunic="true" isOpen="true" pathVisible="true">
 
 			<position ____objectunic="true" X="603" Y="28"/>
 </panel>
 </extraProperties>
 
-	<attributes name="ID" kind="storage" scope="public" uuid="16F4262D9CB63E44A5AF5DA9522696A0" fieldPos="1" unique="true" autosequence="true" type="long"/>
+	<attributes name="ID" kind="storage" scope="public" uuid="16F4262D9CB63E44A5AF5DA9522696A0" fieldPos="1" unique="true" autosequence="true" type="long" primKey="true"/>
 
 	<attributes name="display_name" kind="storage" scope="public" uuid="D6E368444FCBD842A2BF6D9DD685E296" fieldPos="2" type="string"/>
 
 	<attributes name="session_detail" kind="relatedEntity" scope="public" type="Term" uuid="4E81FF7A1653184EA6C1064C6D6AD1CB" fieldPos="3" path="Term"/>
-
-	<key name="ID"/>
 
 </dataClasses>
 
@@ -382,13 +380,15 @@
 
 	<extraProperties ____objectunic="true" panelColor="#70CCC2">
 
-		<panel ____objectunic="true" isOpen="true" pathVisible="true" resizedHeight="542">
+		<panel ____objectunic="true" isOpen="true" pathVisible="true" resizedHeight="">
 
-			<position ____objectunic="true" X="21" Y="5"/>
+			<position ____objectunic="true" X="18" Y="5"/>
 </panel>
 </extraProperties>
 
 	<attributes name="ID" kind="storage" scope="public" uuid="701DDE3640302E4F8DCE7537BEDB7604" fieldPos="1" unique="true" autosequence="true" type="long" primKey="true"/>
+
+	<attributes name="id" kind="storage" scope="public" uuid="E8D12433F770464C87C957A12459838D" fieldPos="13" type="string"/>
 
 	<attributes name="name" kind="storage" scope="public" uuid="7E3F4CA57C6425469C821DDAEB7B703C" fieldPos="2" type="string"/>
 
@@ -428,11 +428,11 @@
 
 		<panel ____objectunic="true" isOpen="false" pathVisible="true">
 
-			<position ____objectunic="true" X="239" Y="132"/>
+			<position ____objectunic="true" X="182" Y="9"/>
 </panel>
 </extraProperties>
 
-	<attributes name="ID" kind="storage" scope="public" uuid="5529DB5836CA0E4CB54D14C0C3613E63" fieldPos="1" unique="true" autosequence="true" type="long" primKey="true"/>
+	<attributes name="ID" kind="storage" scope="public" uuid="5529DB5836CA0E4CB54D14C0C3613E63" fieldPos="1" unique="true" autosequence="true" type="long"/>
 
 	<attributes name="start_year" kind="storage" scope="public" uuid="1D7753D24E54374ABDC6AD5F6E44944A" fieldPos="2" type="date"/>
 
@@ -443,6 +443,8 @@
 	<attributes name="state" kind="relatedEntity" scope="public" type="StateMetadata" uuid="B0A455934257E9438CEF35ABF8575CCB" fieldPos="5" path="StateMetadata"/>
 
 	<attributes name="sessions" kind="relatedEntities" scope="public" type="Sessions" reversePath="true" path="session_detail"/>
+
+	<key name="ID"/>
 
 </dataClasses>
 

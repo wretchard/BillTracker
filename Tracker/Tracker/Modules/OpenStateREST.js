@@ -146,7 +146,7 @@ function SaveStateMeta(varURL) {
 	
 	var result=RetrieveData(varURL).result;
 	var StateMeta= ds.StateMetadata.createEntity();
-	var RelID=StateMeta.ID;
+	StateMeta.id=result.id;
 	StateMeta.name=result.name;
 	StateMeta.abbreviation=result.abbreviation;
 	StateMeta.legislature_name=result.legislature_name;
@@ -161,17 +161,17 @@ function SaveStateMeta(varURL) {
 	StateMeta.save();		
 	
 	//Term related records
-	/*for (var t in result.terms) 
+	for (var t in result.terms) 
 	{
-		Term(result.terms[t], RelID, StateMeta)
+		Term(result.terms[t], StateMeta)
 	}
 	
-	//OGTerm related records
-	for (var t in result.session_details) 
+	//Feature flag related records
+	for (var t in result.feature_flags) 
 	{
-		Session(result.session_details[t], RelID, StateMeta)
+		FeatureFlags(result.feature_flags[t], StateMeta)
 	}
-	
+	/*
 	//OGFeatureFlag related records
 	for (var t in result.feature_flags) 
 	{
@@ -181,21 +181,33 @@ function SaveStateMeta(varURL) {
 
 }
 
-function Term(r, RelID, StateMeta) {
+function Term(r, StateMeta) {
 		StateTerm = new ds.Term({
 			start_year:r.start_year,
 			end_year:r.end_year,
 			name:r.name})
-		StateTerm.StateMetaData=StateMeta;
+		StateTerm.state=StateMeta;
 		StateTerm.save();
+		
+		for (var t in r.sessions) 
+		{
+		Session(r.sessions[t], StateTerm)
+		}
 }
 
-function Session(r, RelID, StateMeta) {
-		StateSession = new ds.Session({
-			type:r.type,
-			display_name:r.display_name
+
+function FeatureFlags(r, StateMeta) {
+		Flag = new ds.Feature_flag({
+			subjects:r})
+		Flag.feature_flags=StateMeta;
+		Flag.save();
+}
+
+function Session(session, StateTerm) {
+		StateSession = new ds.Session_detail({
+			display_name:session
 			})
-		StateSession.oGStateMetaData=StateMeta;
+		StateSession.session_detail=StateTerm;
 		StateSession.save();
 }
 
@@ -203,7 +215,7 @@ function Flag(r, RelID, StateMeta) {
 		StateFlag = new ds.FeatureFlag({
 			item:r
 			})
-		StateFlag.StateMetaData=StateMeta;
+		StateFlag.state=StateMeta;
 		StateFlag.save();
 }
 
@@ -239,13 +251,15 @@ function GetKeys(obj) {
 
 
 //StringMaker()
+function TestData(){
 var v="http://openstates.org/api/v1/metadata/ma/?apikey=";
 var w= v + require('openstates.api_key').openstates_api_key();
 SaveStateMeta(w);
+}
 //var x = RetrieveData(w).result;
 //var y = GetKeys(x[0]);
 //y;
-
-//ClearOpenStateData()
+ClearOpenStateData();
+TestData();
 //RetrieveData("http://openstates.org/api/v1/bills/?q=agriculture&state=ca&chamber=upper&apikey=a7b283f866e94ff0a572ec269c76a32e");
 //RetrieveData("http://openstates.org/api/v1/bills/?q=agriculture&state=ca&chamber=upper&apikey=a7b283f866e94ff0a572ec269c76a32e");

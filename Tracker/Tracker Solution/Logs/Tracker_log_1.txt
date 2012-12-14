@@ -308,3 +308,181 @@
 2012-12-13 18:44:32 [com.wakanda-software.Tracker.ServerAdmin] INFO - Closing the project
 2012-12-13 18:44:32 [com.wakanda-software.Tracker.ServerAdmin] INFO - Project closed (duration: 10 ms)
 2012-12-13 18:44:32 [com.wakanda-software.Tracker] INFO - Solution closed (duration: 665 ms)
+2012-12-14 05:08:03 [com.wakanda-software.Tracker] INFO - Opening the solution
+2012-12-14 05:08:03 [com.wakanda-software.Tracker] INFO - Opening the users and groups directory
+2012-12-14 05:08:03 [com.wakanda-software.Tracker] INFO - Users and groups directory opened (duration: 52 ms)
+2012-12-14 05:08:03 [com.wakanda-software.Tracker.Tracker] INFO - Opening the project
+2012-12-14 05:08:03 [com.wakanda-software.Tracker.Tracker] INFO - Opening the database
+2012-12-14 05:08:03 [com.wakanda-software.Tracker.Tracker] INFO - Database opened (duration: 46 ms)
+2012-12-14 05:08:03 [com.wakanda-software.Tracker.Tracker] INFO - Project opened (duration: 93 ms)
+2012-12-14 05:08:03 [com.wakanda-software.Tracker.ServerAdmin] INFO - Opening the project
+2012-12-14 05:08:03 [com.wakanda-software.Tracker.ServerAdmin] INFO - Project opened (duration: 15 ms)
+2012-12-14 05:08:03 [com.wakanda-software.Tracker] INFO - Solution opened (duration: 317 ms)
+2012-12-14 05:08:03 [com.wakanda-software.Tracker] INFO - Starting the solution
+2012-12-14 05:08:03 [com.wakanda-software.Tracker.Tracker] INFO - Starting the project
+2012-12-14 05:08:04 [com.wakanda-software.Tracker.Tracker] INFO - Starting the HTTP server
+2012-12-14 05:08:04 [com.wakanda-software.Tracker.Tracker] INFO - HTTP server started (duration: 89 ms)
+2012-12-14 05:08:04 [com.wakanda-software.Tracker.Tracker] INFO - Project started (duration: 269 ms)
+2012-12-14 05:08:04 [com.wakanda-software.Tracker.ServerAdmin] INFO - Starting the project
+2012-12-14 05:08:04 [com.wakanda-software.Tracker.ServerAdmin] INFO - Starting the HTTP server
+2012-12-14 05:08:04 [com.wakanda-software.Tracker.ServerAdmin] INFO - HTTP server started (duration: 135 ms)
+2012-12-14 05:08:04 [com.wakanda-software.Tracker.ServerAdmin] INFO - Project started (duration: 250 ms)
+2012-12-14 05:08:04 [com.wakanda-software.Tracker.Tracker] INFO - Executing the bootstrap(s)
+2012-12-14 05:08:04 [com.wakanda-software.Tracker.Tracker] INFO - Bootstrap(s) executed (duration: 0 ms)
+2012-12-14 05:08:04 [com.wakanda-software.Tracker.ServerAdmin] INFO - Executing the bootstrap(s)
+2012-12-14 05:08:04 [com.wakanda-software.Tracker.ServerAdmin] INFO - Bootstrap(s) executed (duration: 28 ms)
+2012-12-14 05:08:04 [com.wakanda-software.Tracker] INFO - Solution started (duration: 549 ms)
+2012-12-14 06:09:03 [com.wakanda-software.Tracker.Tracker] INFO - Closing the database
+2012-12-14 06:09:03 [com.wakanda-software.Tracker.Tracker] INFO - Database closed (duration: 404 ms)
+2012-12-14 06:09:03 [com.wakanda-software.Tracker.Tracker] INFO - Opening the database
+2012-12-14 06:09:03 [com.wakanda-software.Tracker.Tracker] INFO - Database opened (duration: 44 ms)
+2012-12-14 06:12:36 [com.wakanda-software.Tracker.Tracker] INFO - Closing the database
+2012-12-14 06:12:36 [com.wakanda-software.Tracker.Tracker] INFO - Database closed (duration: 411 ms)
+2012-12-14 06:12:36 [com.wakanda-software.Tracker.Tracker] INFO - Opening the database
+2012-12-14 06:12:36 [com.wakanda-software.Tracker.Tracker] INFO - Database opened (duration: 45 ms)
+2012-12-14 06:59:35 [com.wakanda-software.Tracker.Tracker] INFO - Closing the database
+2012-12-14 06:59:35 [com.wakanda-software.Tracker.Tracker] INFO - Database closed (duration: 406 ms)
+2012-12-14 06:59:35 [com.wakanda-software.Tracker.Tracker] INFO - Opening the database
+2012-12-14 06:59:35 [com.wakanda-software.Tracker.Tracker] INFO - Database opened (duration: 37 ms)
+2012-12-14 07:28:11 [com.wakanda-software.Tracker.Tracker] INFO - Closing the database
+2012-12-14 07:28:12 [com.wakanda-software.Tracker.Tracker] INFO - Database closed (duration: 406 ms)
+2012-12-14 07:28:12 [com.wakanda-software.Tracker.Tracker] INFO - Opening the database
+2012-12-14 07:28:12 [com.wakanda-software.Tracker.Tracker] INFO - Database opened (duration: 45 ms)
+2012-12-14 07:32:54 [com.wakanda-software.Tracker.Tracker.JS4D] ERROR - [1] TypeError: 'undefined' is not an object (evaluating 'counter.remove'), HTTP connection handler
+2012-12-14 07:32:54 [com.wakanda-software.Tracker.Tracker.JS4D] ERROR - [2] Error evaluating javascript file:///C:/Users/dse/Documents/BillTracker/Tracker/Tracker/Modules/OpenStateREST.js, HTTP connection handler
+2012-12-14 07:33:12 [com.wakanda-software.Tracker.Tracker.JS4D] ERROR - [1] TypeError: 'undefined' is not an object (evaluating 'counter.remove'), HTTP connection handler
+2012-12-14 07:33:12 [com.wakanda-software.Tracker.Tracker.JS4D] ERROR - [2] Error evaluating javascript file:///C:/Users/dse/Documents/BillTracker/Tracker/Tracker/Modules/OpenStateREST.js, HTTP connection handler
+2012-12-14 07:33:37 [com.wakanda-software.Tracker.Tracker.JS4D] ERROR - [1] TypeError: 'undefined' is not an object (evaluating 'counter.remove'), HTTP connection handler
+2012-12-14 07:33:37 [com.wakanda-software.Tracker.Tracker.JS4D] ERROR - [2] Error evaluating javascript file:///C:/Users/dse/Documents/BillTracker/Tracker/Tracker/Modules/OpenStateREST.js, HTTP connection handler
+2012-12-14 07:33:42 [com.wakanda-software.Tracker] INFO - Stopping the solution
+2012-12-14 07:33:42 [com.wakanda-software.Tracker.Tracker] INFO - Stopping the project
+2012-12-14 07:33:44 [com.wakanda-software.Tracker.Tracker] INFO - Project stopped (duration: 2150 ms)
+2012-12-14 07:33:44 [com.wakanda-software.Tracker.ServerAdmin] INFO - Stopping the project
+2012-12-14 07:33:47 [com.wakanda-software.Tracker.ServerAdmin] INFO - Project stopped (duration: 2101 ms)
+2012-12-14 07:33:47 [com.wakanda-software.Tracker] INFO - Solution stopped (duration: 4252 ms)
+2012-12-14 07:33:47 [com.wakanda-software.Tracker] INFO - Closing the solution
+2012-12-14 07:33:47 [com.wakanda-software.Tracker.Tracker] INFO - Closing the project
+2012-12-14 07:33:47 [com.wakanda-software.Tracker.Tracker] INFO - Closing the database
+2012-12-14 07:33:47 [com.wakanda-software.Tracker.Tracker] INFO - Database closed (duration: 311 ms)
+2012-12-14 07:33:47 [com.wakanda-software.Tracker.Tracker] INFO - Project closed (duration: 330 ms)
+2012-12-14 07:33:47 [com.wakanda-software.Tracker.ServerAdmin] INFO - Closing the project
+2012-12-14 07:33:47 [com.wakanda-software.Tracker.ServerAdmin] INFO - Project closed (duration: 25 ms)
+2012-12-14 07:33:47 [com.wakanda-software.Tracker] INFO - Solution closed (duration: 678 ms)
+2012-12-14 09:32:16 [com.wakanda-software.Tracker] INFO - Opening the solution
+2012-12-14 09:32:16 [com.wakanda-software.Tracker] INFO - Opening the users and groups directory
+2012-12-14 09:32:16 [com.wakanda-software.Tracker] INFO - Users and groups directory opened (duration: 43 ms)
+2012-12-14 09:32:16 [com.wakanda-software.Tracker.Tracker] INFO - Opening the project
+2012-12-14 09:32:16 [com.wakanda-software.Tracker.Tracker] INFO - Opening the database
+2012-12-14 09:32:16 [com.wakanda-software.Tracker.Tracker] INFO - Database opened (duration: 40 ms)
+2012-12-14 09:32:16 [com.wakanda-software.Tracker.Tracker] INFO - Project opened (duration: 69 ms)
+2012-12-14 09:32:16 [com.wakanda-software.Tracker.ServerAdmin] INFO - Opening the project
+2012-12-14 09:32:16 [com.wakanda-software.Tracker.ServerAdmin] INFO - Project opened (duration: 16 ms)
+2012-12-14 09:32:16 [com.wakanda-software.Tracker] INFO - Solution opened (duration: 387 ms)
+2012-12-14 09:32:16 [com.wakanda-software.Tracker] INFO - Starting the solution
+2012-12-14 09:32:16 [com.wakanda-software.Tracker.Tracker] INFO - Starting the project
+2012-12-14 09:32:16 [com.wakanda-software.Tracker.Tracker] INFO - Starting the HTTP server
+2012-12-14 09:32:16 [com.wakanda-software.Tracker.Tracker] INFO - HTTP server started (duration: 108 ms)
+2012-12-14 09:32:16 [com.wakanda-software.Tracker.Tracker] INFO - Project started (duration: 259 ms)
+2012-12-14 09:32:16 [com.wakanda-software.Tracker.ServerAdmin] INFO - Starting the project
+2012-12-14 09:32:16 [com.wakanda-software.Tracker.ServerAdmin] INFO - Starting the HTTP server
+2012-12-14 09:32:17 [com.wakanda-software.Tracker.ServerAdmin] INFO - HTTP server started (duration: 191 ms)
+2012-12-14 09:32:17 [com.wakanda-software.Tracker.ServerAdmin] INFO - Project started (duration: 345 ms)
+2012-12-14 09:32:17 [com.wakanda-software.Tracker.Tracker] INFO - Executing the bootstrap(s)
+2012-12-14 09:32:17 [com.wakanda-software.Tracker.Tracker] INFO - Bootstrap(s) executed (duration: 0 ms)
+2012-12-14 09:32:17 [com.wakanda-software.Tracker.ServerAdmin] INFO - Executing the bootstrap(s)
+2012-12-14 09:32:17 [com.wakanda-software.Tracker.ServerAdmin] INFO - Bootstrap(s) executed (duration: 88 ms)
+2012-12-14 09:32:17 [com.wakanda-software.Tracker] INFO - Solution started (duration: 695 ms)
+2012-12-14 09:33:07 [com.wakanda-software.Tracker.Tracker.JS4D] ERROR - [1] TypeError: 'undefined' is not an object (evaluating 'counter.remove'), HTTP connection handler
+2012-12-14 09:33:07 [com.wakanda-software.Tracker.Tracker.JS4D] ERROR - [2] Error evaluating javascript file:///C:/Users/dse/Documents/BillTracker/Tracker/Tracker/Modules/OpenStateREST.js, HTTP connection handler
+2012-12-14 09:33:50 [com.wakanda-software.Tracker.Tracker] INFO - Closing the database
+2012-12-14 09:33:50 [com.wakanda-software.Tracker.Tracker] INFO - Database closed (duration: 405 ms)
+2012-12-14 09:33:50 [com.wakanda-software.Tracker.Tracker] INFO - Opening the database
+2012-12-14 09:33:50 [com.wakanda-software.Tracker.Tracker] INFO - Database opened (duration: 40 ms)
+2012-12-14 09:57:59 [com.wakanda-software.Tracker.Tracker] INFO - Closing the database
+2012-12-14 09:57:59 [com.wakanda-software.Tracker.Tracker] INFO - Database closed (duration: 404 ms)
+2012-12-14 09:57:59 [com.wakanda-software.Tracker.Tracker] INFO - Opening the database
+2012-12-14 09:57:59 [com.wakanda-software.Tracker.Tracker] INFO - Database opened (duration: 38 ms)
+2012-12-14 10:30:07 [com.wakanda-software.Tracker] INFO - Opening the solution
+2012-12-14 10:30:07 [com.wakanda-software.Tracker] INFO - Opening the users and groups directory
+2012-12-14 10:30:07 [com.wakanda-software.Tracker] INFO - Users and groups directory opened (duration: 40 ms)
+2012-12-14 10:30:07 [com.wakanda-software.Tracker.Tracker] INFO - Opening the project
+2012-12-14 10:30:07 [com.wakanda-software.Tracker.Tracker] INFO - Opening the database
+2012-12-14 10:30:07 [com.wakanda-software.Tracker.Tracker] INFO - Database opened (duration: 36 ms)
+2012-12-14 10:30:07 [com.wakanda-software.Tracker.Tracker] INFO - Project opened (duration: 68 ms)
+2012-12-14 10:30:07 [com.wakanda-software.Tracker.ServerAdmin] INFO - Opening the project
+2012-12-14 10:30:07 [com.wakanda-software.Tracker.ServerAdmin] INFO - Project opened (duration: 13 ms)
+2012-12-14 10:30:07 [com.wakanda-software.Tracker] INFO - Solution opened (duration: 408 ms)
+2012-12-14 10:30:07 [com.wakanda-software.Tracker] INFO - Starting the solution
+2012-12-14 10:30:07 [com.wakanda-software.Tracker.Tracker] INFO - Starting the project
+2012-12-14 10:30:07 [com.wakanda-software.Tracker.Tracker] INFO - Starting the HTTP server
+2012-12-14 10:30:07 [com.wakanda-software.Tracker.Tracker] INFO - HTTP server started (duration: 95 ms)
+2012-12-14 10:30:07 [com.wakanda-software.Tracker.Tracker] INFO - Project started (duration: 181 ms)
+2012-12-14 10:30:07 [com.wakanda-software.Tracker.ServerAdmin] INFO - Starting the project
+2012-12-14 10:30:07 [com.wakanda-software.Tracker.ServerAdmin] INFO - Starting the HTTP server
+2012-12-14 10:30:07 [com.wakanda-software.Tracker.ServerAdmin] INFO - HTTP server started (duration: 155 ms)
+2012-12-14 10:30:07 [com.wakanda-software.Tracker.ServerAdmin] INFO - Project started (duration: 301 ms)
+2012-12-14 10:30:07 [com.wakanda-software.Tracker.Tracker] INFO - Executing the bootstrap(s)
+2012-12-14 10:30:07 [com.wakanda-software.Tracker.Tracker] INFO - Bootstrap(s) executed (duration: 0 ms)
+2012-12-14 10:30:07 [com.wakanda-software.Tracker.ServerAdmin] INFO - Executing the bootstrap(s)
+2012-12-14 10:30:08 [com.wakanda-software.Tracker.ServerAdmin] INFO - Bootstrap(s) executed (duration: 22 ms)
+2012-12-14 10:30:08 [com.wakanda-software.Tracker] INFO - Solution started (duration: 507 ms)
+2012-12-14 10:38:34 [com.wakanda-software.Tracker.Tracker] INFO - Closing the database
+2012-12-14 10:38:34 [com.wakanda-software.Tracker.Tracker] INFO - Database closed (duration: 443 ms)
+2012-12-14 10:38:34 [com.wakanda-software.Tracker.Tracker] INFO - Opening the database
+2012-12-14 10:38:34 [com.wakanda-software.Tracker.Tracker] INFO - Database opened (duration: 34 ms)
+2012-12-14 10:39:08 [com.wakanda-software.Tracker.Tracker] INFO - Closing the database
+2012-12-14 10:39:09 [com.wakanda-software.Tracker.Tracker] INFO - Database closed (duration: 405 ms)
+2012-12-14 10:39:09 [com.wakanda-software.Tracker.Tracker] INFO - Opening the database
+2012-12-14 10:39:09 [com.wakanda-software.Tracker.Tracker] INFO - Database opened (duration: 41 ms)
+2012-12-14 10:39:50 [com.wakanda-software.Tracker] INFO - Stopping the solution
+2012-12-14 10:39:50 [com.wakanda-software.Tracker.Tracker] INFO - Stopping the project
+2012-12-14 10:39:52 [com.wakanda-software.Tracker.Tracker] INFO - Project stopped (duration: 2107 ms)
+2012-12-14 10:39:52 [com.wakanda-software.Tracker.ServerAdmin] INFO - Stopping the project
+2012-12-14 10:39:54 [com.wakanda-software.Tracker.ServerAdmin] INFO - Project stopped (duration: 2107 ms)
+2012-12-14 10:39:54 [com.wakanda-software.Tracker] INFO - Solution stopped (duration: 4215 ms)
+2012-12-14 10:39:54 [com.wakanda-software.Tracker] INFO - Closing the solution
+2012-12-14 10:39:54 [com.wakanda-software.Tracker.Tracker] INFO - Closing the project
+2012-12-14 10:39:54 [com.wakanda-software.Tracker.Tracker] INFO - Closing the database
+2012-12-14 10:39:55 [com.wakanda-software.Tracker.Tracker] INFO - Database closed (duration: 419 ms)
+2012-12-14 10:39:55 [com.wakanda-software.Tracker.Tracker] INFO - Project closed (duration: 428 ms)
+2012-12-14 10:39:55 [com.wakanda-software.Tracker.ServerAdmin] INFO - Closing the project
+2012-12-14 10:39:55 [com.wakanda-software.Tracker.ServerAdmin] INFO - Project closed (duration: 9 ms)
+2012-12-14 10:39:55 [com.wakanda-software.Tracker] INFO - Solution closed (duration: 794 ms)
+2012-12-14 11:03:33 [com.wakanda-software.Tracker] INFO - Opening the solution
+2012-12-14 11:03:33 [com.wakanda-software.Tracker] INFO - Opening the users and groups directory
+2012-12-14 11:03:33 [com.wakanda-software.Tracker] INFO - Users and groups directory opened (duration: 36 ms)
+2012-12-14 11:03:33 [com.wakanda-software.Tracker.Tracker] INFO - Opening the project
+2012-12-14 11:03:33 [com.wakanda-software.Tracker.Tracker] INFO - Opening the database
+2012-12-14 11:03:33 [com.wakanda-software.Tracker.Tracker] INFO - Database opened (duration: 51 ms)
+2012-12-14 11:03:33 [com.wakanda-software.Tracker.Tracker] INFO - Project opened (duration: 82 ms)
+2012-12-14 11:03:33 [com.wakanda-software.Tracker.ServerAdmin] INFO - Opening the project
+2012-12-14 11:03:33 [com.wakanda-software.Tracker.ServerAdmin] INFO - Project opened (duration: 13 ms)
+2012-12-14 11:03:33 [com.wakanda-software.Tracker] INFO - Solution opened (duration: 271 ms)
+2012-12-14 11:03:33 [com.wakanda-software.Tracker] INFO - Starting the solution
+2012-12-14 11:03:33 [com.wakanda-software.Tracker.Tracker] INFO - Starting the project
+2012-12-14 11:03:33 [com.wakanda-software.Tracker.Tracker] INFO - Starting the HTTP server
+2012-12-14 11:03:33 [com.wakanda-software.Tracker.Tracker] INFO - HTTP server started (duration: 114 ms)
+2012-12-14 11:03:33 [com.wakanda-software.Tracker.Tracker] INFO - Project started (duration: 226 ms)
+2012-12-14 11:03:33 [com.wakanda-software.Tracker.ServerAdmin] INFO - Starting the project
+2012-12-14 11:03:33 [com.wakanda-software.Tracker.ServerAdmin] INFO - Starting the HTTP server
+2012-12-14 11:03:34 [com.wakanda-software.Tracker.ServerAdmin] INFO - HTTP server started (duration: 173 ms)
+2012-12-14 11:03:34 [com.wakanda-software.Tracker.ServerAdmin] INFO - Project started (duration: 322 ms)
+2012-12-14 11:03:34 [com.wakanda-software.Tracker.Tracker] INFO - Executing the bootstrap(s)
+2012-12-14 11:03:34 [com.wakanda-software.Tracker.Tracker] INFO - Bootstrap(s) executed (duration: 0 ms)
+2012-12-14 11:03:34 [com.wakanda-software.Tracker.ServerAdmin] INFO - Executing the bootstrap(s)
+2012-12-14 11:03:34 [com.wakanda-software.Tracker.ServerAdmin] INFO - Bootstrap(s) executed (duration: 25 ms)
+2012-12-14 11:03:34 [com.wakanda-software.Tracker] INFO - Solution started (duration: 576 ms)
+2012-12-14 11:46:50 [com.wakanda-software.Tracker] INFO - Stopping the solution
+2012-12-14 11:46:50 [com.wakanda-software.Tracker.Tracker] INFO - Stopping the project
+2012-12-14 11:46:52 [com.wakanda-software.Tracker.Tracker] INFO - Project stopped (duration: 2145 ms)
+2012-12-14 11:46:52 [com.wakanda-software.Tracker.ServerAdmin] INFO - Stopping the project
+2012-12-14 11:46:55 [com.wakanda-software.Tracker.ServerAdmin] INFO - Project stopped (duration: 2128 ms)
+2012-12-14 11:46:55 [com.wakanda-software.Tracker] INFO - Solution stopped (duration: 4275 ms)
+2012-12-14 11:46:55 [com.wakanda-software.Tracker] INFO - Closing the solution
+2012-12-14 11:46:55 [com.wakanda-software.Tracker.Tracker] INFO - Closing the project
+2012-12-14 11:46:55 [com.wakanda-software.Tracker.Tracker] INFO - Closing the database
+2012-12-14 11:46:55 [com.wakanda-software.Tracker.Tracker] INFO - Database closed (duration: 304 ms)
+2012-12-14 11:46:55 [com.wakanda-software.Tracker.Tracker] INFO - Project closed (duration: 313 ms)
+2012-12-14 11:46:55 [com.wakanda-software.Tracker.ServerAdmin] INFO - Closing the project
+2012-12-14 11:46:55 [com.wakanda-software.Tracker.ServerAdmin] INFO - Project closed (duration: 11 ms)
+2012-12-14 11:46:55 [com.wakanda-software.Tracker] INFO - Solution closed (duration: 646 ms)
