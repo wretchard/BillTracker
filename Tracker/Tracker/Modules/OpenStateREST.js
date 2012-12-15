@@ -242,11 +242,11 @@ function ClearOpenStateData(arg) {
 	case 'Bill':
 		var Table_List = ['Bill', 'BillType']
 		break;
+	case 'Legislator':
+		var Table_List = ['Legislator']
+		break;	
 	default:
-		var Table_List = ['Action', 'Bill', 'BillDocument', 'Committee',
-		'District', 'Event', 'Feature_flag', 'Legislator', 'Participant',
-		'Role', 'Session_detail', 'Source', 'Sponsor', 'StateMetadata',
-		'Term', 'Version', 'Vote'	]	
+		var Table_List = []	
 	}
 	
 	for (t in Table_List)
@@ -270,6 +270,36 @@ function GetKeys(obj) {
 		}
 	return keys;
 }
+
+function SaveLegislator(varURL) {
+	var result=RetrieveData(varURL).result;
+	for (var t in result)
+	{
+	//look for existing record
+	TheLegislator=ds.Legislator.find('id= :1', result[t].id)
+	if (TheLegislator == null)
+	{TheLegislator= ds.Legislator.createEntity();}	
+	
+	TheLegislator.last_name=result[t].last_name;
+	TheLegislator.updated_at=result[t].updated_at;
+	TheLegislator.full_name=result[t].full_name;
+	TheLegislator.id=result[t].id;
+	TheLegislator.first_name=result[t].first_name;
+	TheLegislator.middle_name=result[t].middle_name;
+	TheLegislator.district=result[t].district;
+	TheLegislator.state=result[t].state;
+	TheLegislator.party=result[t].party;
+	TheLegislator.leg_id=result[t].leg_id;
+	TheLegislator.active=result[t].active;
+	TheLegislator.photo_url=result[t].photo_url;
+	TheLegislator.created_at=result[t].created_at;
+	TheLegislator.chamber=result[t].chamber;
+	TheLegislator.suffixes=result[t].suffixes;
+	TheLegislator.save();		
+	
+	}	
+}
+
 
 function SaveBill(varURL) {
 	var result=RetrieveData(varURL).result;
@@ -333,6 +363,11 @@ function TestData(arg){
 		w= v + require('openstates.api_key').openstates_api_key();
 		SaveBill(w);
 		break;
+	case 'Legislator':
+		v="http://openstates.org/api/v1/legislators/?state=ca&party=democratic&active=true&apikey=";
+		w= v + require('openstates.api_key').openstates_api_key();
+		SaveLegislator(w);
+		break;
 	default:
 		var Table_List = ['Action', 'Bill', 'BillDocument', 'Committee',
 		'District', 'Event', 'Feature_flag', 'Legislator', 'Participant',
@@ -343,7 +378,7 @@ function TestData(arg){
 //var x = RetrieveData(w).result;
 //var y = GetKeys(x[0]);
 //y;
-//ClearOpenStateData('Bill');
-TestData('Bill');
+ClearOpenStateData('Legislator');
+TestData('Legislator');
 //RetrieveData("http://openstates.org/api/v1/bills/?q=agriculture&state=ca&chamber=upper&apikey=a7b283f866e94ff0a572ec269c76a32e");
 //RetrieveData("http://openstates.org/api/v1/bills/?q=agriculture&state=ca&chamber=upper&apikey=a7b283f866e94ff0a572ec269c76a32e");
