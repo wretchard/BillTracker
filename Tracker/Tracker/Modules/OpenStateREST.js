@@ -145,12 +145,13 @@ return jObj;
 function SaveStateMeta(varURL) {
 	
 	var result=RetrieveData(varURL).result;
-	//look for existing record
+	
+//look for existing record
 	StateMeta=ds.StateMetadata.find('id= :1', result.id)
 	if (StateMeta == null)
 	{StateMeta= ds.StateMetadata.createEntity();
-	StateMeta.id=result.id;
-	}
+	StateMeta.id=result.id;	}
+	
 	StateMeta.name=result.name;
 	StateMeta.abbreviation=result.abbreviation;
 	StateMeta.legislature_name=result.legislature_name;
@@ -230,11 +231,23 @@ function Flag(r, RelID, StateMeta) {
 		StateFlag.save();
 }
 
-function ClearOpenStateData() {
-	var Table_List = ['Action', 'Bill', 'BillDocument', 'Committee',
-	'District', 'Event', 'Feature_flag', 'Legislator', 'Participant',
-	'Role', 'Session_detail', 'Source', 'Sponsor', 'StateMetadata',
-	'Term', 'Version', 'Vote'	]
+function ClearOpenStateData(arg) {
+	
+	switch(arg)
+	{
+	case 'StateMetaData':
+		var Table_List = ['Feature_flag', 'Session_detail', 
+		'StateMetadata', 'Term'	]
+		break;
+	case 'Bill':
+		var Table_List = ['Bill', 'BillType']
+		break;
+	default:
+		var Table_List = ['Action', 'Bill', 'BillDocument', 'Committee',
+		'District', 'Event', 'Feature_flag', 'Legislator', 'Participant',
+		'Role', 'Session_detail', 'Source', 'Sponsor', 'StateMetadata',
+		'Term', 'Version', 'Vote'	]	
+	}
 	
 	for (t in Table_List)
 	{
@@ -258,27 +271,79 @@ function GetKeys(obj) {
 	return keys;
 }
 
-
-
+function SaveBill(varURL) {
+	var result=RetrieveData(varURL).result;
+	for (var t in result)
+	{
+    //look for existing record
+	TheBill=ds.Bill.find('bill_id= :1', result[t].bill_id)
+	if (TheBill == null)
+	{TheBill= ds.Bill.createEntity();}
+	
+	TheBill.title=result[t].title;
+	TheBill.created_at=result[t].created_at;
+	TheBill.updated_at=result[t].updated_at;
+	TheBill.chamber=result[t].chamber;
+	TheBill.state=result[t].state;
+	TheBill.session=result[t].session;
+	TheBill.bill_id=result[t].bill_id;
+	TheBill.id=result[t].id;
+	TheBill.save();	
+	
+	//remove the related BillTypes first
+	TheOldBillType = ds.BillType.query('bill_type.id= :1', result[t].id)
+	if (TheOldBillType){TheOldBillType.remove();}
+	for (v in result[t].type)
+	{
+			TheBillType =  ds.BillType.createEntity();
+			TheBillType.type=result[t].type[v];
+			TheBillType.bill_type=TheBill;
+			TheBillType.save();
+	}
+	//remove the related BillSubject first
+	TheOldBillSubject = ds.BillSubject.query('bill.id= :1', result[t].id)	
+	if (TheOldBillSubject){TheOldBillSubject.remove();}	
+	for (v in result[t].subjects)
+	{
+			TheBillSubject =  ds.BillSubject.createEntity();
+			TheBillSubject.subject=result[t].subjects[v];
+			TheBillSubject.bill=TheBill;
+			TheBillSubject.save();
+	}		
+}	
+	
+}
 
 
 //StringMaker()
-function TestData(){
-	for (var key in STATE_LIST){
+function TestData(arg){
+
+	switch(arg)
+	{
+	case 'StateMetaData':
+		for (var key in STATE_LIST){
 		state =key;
 		v="http://openstates.org/api/v1/metadata/" + state + "/?apikey=";
 		w= v + require('openstates.api_key').openstates_api_key();
 		SaveStateMeta(w);
 		}	
-	
-//var v="http://openstates.org/api/v1/metadata/ma/?apikey=";
-//var w= v + require('openstates.api_key').openstates_api_key();
-//SaveStateMeta(w);
+		break;
+	case 'Bill':
+		v="http://openstates.org/api/v1/bills/?q=agriculture&state=tx&chamber=upper&apikey=";
+		w= v + require('openstates.api_key').openstates_api_key();
+		SaveBill(w);
+		break;
+	default:
+		var Table_List = ['Action', 'Bill', 'BillDocument', 'Committee',
+		'District', 'Event', 'Feature_flag', 'Legislator', 'Participant',
+		'Role', 'Session_detail', 'Source', 'Sponsor', 'StateMetadata',
+		'Term', 'Version', 'Vote'	]	
+	}	
 }
 //var x = RetrieveData(w).result;
 //var y = GetKeys(x[0]);
 //y;
-ClearOpenStateData();
-TestData();
+//ClearOpenStateData('Bill');
+TestData('Bill');
 //RetrieveData("http://openstates.org/api/v1/bills/?q=agriculture&state=ca&chamber=upper&apikey=a7b283f866e94ff0a572ec269c76a32e");
 //RetrieveData("http://openstates.org/api/v1/bills/?q=agriculture&state=ca&chamber=upper&apikey=a7b283f866e94ff0a572ec269c76a32e");
