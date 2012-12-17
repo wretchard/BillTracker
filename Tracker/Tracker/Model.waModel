@@ -158,19 +158,35 @@
 
 	<attributes name="sources" kind="relatedEntities" scope="public" type="Sources" reversePath="true" path="committee_sources"/>
 
+	<attributes name="id" kind="storage" scope="public" uuid="62421790C7D9CB4EBF594B53ABD18C37" fieldPos="9" type="string"/>
+
+	<attributes name="chamber" kind="storage" scope="public" uuid="FF0CBF954E0614419C8748AA1B776D1F" fieldPos="10" type="string"/>
+
+	<attributes name="updated_at" kind="storage" scope="public" uuid="E119354DA2255D43AAE08132028A4918" fieldPos="11" type="date"/>
+
+	<attributes name="created_at" kind="storage" scope="public" uuid="ACB939B7A695D346A8133288FBEB1B9D" fieldPos="12" type="date"/>
+
+	<attributes name="country" kind="storage" scope="public" uuid="E7F9829F7C08AE469EB6EE9B8D0ED90B" fieldPos="13" type="string"/>
+
+	<attributes name="level" kind="storage" scope="public" uuid="0194DA7950A7AE4A8D95AF10F5CEF18B" fieldPos="14" type="string"/>
+
+	<attributes name="members" kind="relatedEntities" scope="public" type="Members" reversePath="true" path="members"/>
+
 </dataClasses>
 
 <dataClasses name="District" className="District" collectionName="Districts" scope="public" uuid="1D44B017FECEE14C8318A392C6000A64" tablePos="17">
 
 	<extraProperties ____objectunic="true" panelColor="#CCC1D9">
 
-		<panel ____objectunic="true" isOpen="false" pathVisible="true">
+		<panel ____objectunic="true" isOpen="true" pathVisible="true">
 
-			<position ____objectunic="true" X="17" Y="21"/>
+			<position ____objectunic="true" X="12" Y="8"/>
 </panel>
 </extraProperties>
 
 	<attributes name="ID" kind="storage" scope="public" uuid="AB50C2BDBDA09E4992131E36DCE01E93" fieldPos="1" unique="true" autosequence="true" type="long" primKey="true"/>
+
+	<attributes name="id" scope="public" uuid="5129D0EFA1C19643A1F936FB259B5FF9" fieldPos="7" type="string" kind="storage"/>
 
 	<attributes name="name" kind="storage" scope="public" uuid="DA59276D4B32814AAF2E3F57087F810A" fieldPos="2" type="string"/>
 
@@ -180,6 +196,10 @@
 
 	<attributes name="boundary_id" kind="storage" scope="public" uuid="1F009770656F5D41BA9F484A657E7684" fieldPos="5" type="string"/>
 
+	<attributes name="abbr" scope="public" uuid="45D8FB053234BB49888D2F6AD236015A" fieldPos="6" type="string" kind="storage"/>
+
+	<attributes name="legislators" scope="public" reversePath="true" path="district_legislators" type="Legislators" kind="relatedEntities"/>
+
 </dataClasses>
 
 <dataClasses name="Event" className="Event" collectionName="Events" scope="public" uuid="ABFCB1D1B7B1B14887E673FEDF956F05" tablePos="15">
@@ -188,13 +208,13 @@
 
 		<panel ____objectunic="true" isOpen="false" pathVisible="true">
 
-			<position ____objectunic="true" X="37" Y="7"/>
+			<position ____objectunic="true" X="13" Y="36"/>
 </panel>
 </extraProperties>
 
 	<attributes name="ID" kind="storage" scope="public" uuid="D9A2700E66815C49BEA9BC90799539F1" fieldPos="1" unique="true" autosequence="true" type="long" primKey="true"/>
 
-	<attributes name="event_id" kind="storage" scope="public" uuid="1BE701CA3BAC5E4A9EE5BB4DAEE0FE33" fieldPos="2" type="string"/>
+	<attributes name="id" kind="storage" scope="public" uuid="1BE701CA3BAC5E4A9EE5BB4DAEE0FE33" fieldPos="2" type="string"/>
 
 	<attributes name="description" kind="storage" scope="public" uuid="B32E0535AE096B4297E9CFBB7B00FA4B" fieldPos="3" type="string"/>
 
@@ -236,13 +256,13 @@
 
 		<panel ____objectunic="true" isOpen="true" pathVisible="true">
 
-			<position ____objectunic="true" X="125" Y="5"/>
+			<position ____objectunic="true" X="234" Y="5"/>
 </panel>
 </extraProperties>
 
 	<attributes name="ID" kind="storage" scope="public" uuid="15705442ED749045AD04EB66665CC04F" fieldPos="1" unique="true" autosequence="true" type="long" primKey="true"/>
 
-	<attributes name="id" scope="public" uuid="D42F05B2E0EE9F41BD5FD6A4EAC333DE" fieldPos="18" type="string" kind="storage"/>
+	<attributes name="id" kind="storage" scope="public" uuid="D42F05B2E0EE9F41BD5FD6A4EAC333DE" fieldPos="18" type="string"/>
 
 	<attributes name="leg_id" kind="storage" scope="public" uuid="A413C58BFAB10C4D9299D300CBC59B98" fieldPos="2" type="string"/>
 
@@ -278,6 +298,30 @@
 
 	<attributes name="committees" kind="relatedEntity" scope="public" type="Committee" uuid="02C81A4D143C2543949C7BED61B1A346" fieldPos="16" path="Committee"/>
 
+	<attributes name="district_legislators" scope="public" uuid="32F9FB9E1B59F247B561F5F3D6F9DCC1" fieldPos="17" type="District" kind="relatedEntity" path="District"/>
+
+</dataClasses>
+
+<dataClasses name="Member" className="Member" collectionName="Members" scope="public" uuid="615938AB2A34AA44B52248CBB444DD9B" tablePos="20">
+
+	<extraProperties ____objectunic="true" panelColor="#7F7F7F">
+
+		<panel ____objectunic="true" isOpen="false" pathVisible="true" resizedHeight="187">
+
+			<position ____objectunic="true" X="283" Y="9"/>
+</panel>
+</extraProperties>
+
+	<attributes name="ID" kind="storage" scope="public" uuid="F23F351CFF58874DAC8EDF6D5FF7B882" fieldPos="1" unique="true" autosequence="true" type="long" primKey="true"/>
+
+	<attributes name="leg_id" kind="storage" scope="public" uuid="5032F2305FEBB44B81A75ACD5A7990E2" fieldPos="2" type="string"/>
+
+	<attributes name="role" kind="storage" scope="public" uuid="12338EEDC1BFF143B688C4E7F8F68BF7" fieldPos="3" type="string"/>
+
+	<attributes name="name" kind="storage" scope="public" uuid="066BD5113F6BC34CA57A17F6B15C4BEA" fieldPos="4" type="string"/>
+
+	<attributes name="members" kind="relatedEntity" scope="public" type="Committee" uuid="22AA46F76802734FB747221C87C9851F" fieldPos="5" path="Committee"/>
+
 </dataClasses>
 
 <dataClasses name="Participant" className="Participant" collectionName="Participants" scope="public" uuid="925A876912EA6945BDBC41547B8CAC6B" tablePos="16">
@@ -306,7 +350,7 @@
 
 		<panel ____objectunic="true" isOpen="false" pathVisible="true">
 
-			<position ____objectunic="true" X="159" Y="51"/>
+			<position ____objectunic="true" X="147" Y="207"/>
 </panel>
 </extraProperties>
 
@@ -356,7 +400,7 @@
 
 		<panel ____objectunic="true" isOpen="false" pathVisible="true">
 
-			<position ____objectunic="true" X="216" Y="5"/>
+			<position ____objectunic="true" X="269" Y="27"/>
 </panel>
 </extraProperties>
 

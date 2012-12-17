@@ -240,11 +240,20 @@ function ClearOpenStateData(arg) {
 		'StateMetadata', 'Term'	]
 		break;
 	case 'Bill':
-		var Table_List = ['Bill', 'BillType']
+		var Table_List = ['Bill', 'BillType', 'BillSubject']
 		break;
 	case 'Legislator':
 		var Table_List = ['Legislator']
-		break;	
+		break;
+	case 'Committee':
+		var Table_List = ['Committee', 'Member', 'Source']
+		break;
+	case 'Event':
+		var Table_List = ['Event']
+		break;
+	case 'District':
+		var Table_List = ['District']
+		break				
 	default:
 		var Table_List = []	
 	}
@@ -298,6 +307,102 @@ function SaveLegislator(varURL) {
 	TheLegislator.save();		
 	
 	}	
+}
+
+function SaveCommittee(varURL) {
+	var result=RetrieveData(varURL).result;
+	TheCommittee=ds.Committee.find('id= :1', result.id)
+	if (TheCommittee == null)
+	{TheCommittee= ds.Committee.createEntity();}	
+	TheCommittee.id=result.id;
+	TheCommittee.committee=result.committee;
+	TheCommittee.state=result.state;
+	TheCommittee.chamber=result.chamber;
+	TheCommittee.updated_at=result.updated_at;
+	TheCommittee.created_at=result.created_at;
+	TheCommittee.country=result.country;
+	TheCommittee.level=result.level;
+	TheCommittee.save();
+	
+	TheMember = ds.Member.query('members.id= :1', result.id)	
+	if (TheMember){TheMember.remove();}	
+	for (t in result.members)
+	{
+			TheMember =  ds.Member.createEntity();
+			TheMember.leg_id=result.members[t].leg_id;
+			TheMember.role=result.members[t].role;
+			TheMember.name=result.members[t].name;
+			TheMember.members=TheCommittee;
+			TheMember.save();
+	}
+	
+	TheSources = ds.Source.query('committee_sources.id= :1', result.id)	
+	if (TheSources){TheSources.remove();}	
+	for (t in result.sources)
+	{
+			TheSources =  ds.Source.createEntity();
+			TheSources.url=result.sources[t].url;
+			TheSources.committee_sources=TheCommittee;
+			TheSources.save();
+	}	
+	
+}
+
+function SaveEvent(varURL) {
+	var result=RetrieveData(varURL).result;
+	for (var t in result)
+	{
+    //look for existing record
+    for (t in result){
+	TheEvent=ds.Event.find('id= :1', result[t].id)
+	if (TheEvent == null)
+	{TheEvent= ds.Event.createEntity();}
+	TheEvent.id=result[t].id;
+	TheEvent.type=result[t].committee;
+	TheEvent.location=result[t].state;
+	TheEvent.session=result[t].chamber;
+	TheEvent.state=result[t].chamber;
+	TheEvent.updated_at=result[t].chamber;
+	TheEvent.when=result[t].chamber;
+	TheEvent.created_at=result[t].chamber;
+	TheEvent.description=result[t].description;
+	TheEvent.end=result[t].end;
+	TheEvent.save();	
+	}
+}
+}
+
+
+function SaveDistrict(varURL) {
+	var result=RetrieveData(varURL).result;
+	for (var t in result)
+	{
+    //look for existing record
+    for (t in result){
+	TheDistrict=ds.District.find('id= :1', result[t].id)
+	if (TheDistrict == null)
+	{TheDistrict= ds.District.createEntity();}
+	TheDistrict.id=result[t].id;
+	TheDistrict.name=result[t].name;
+	TheDistrict.chamber=result[t].chamber;
+	TheDistrict.abbr=result[t].abbr;
+	TheDistrict.boundary_id=result[t].boundary_id;
+	TheDistrict.num_seats=result[t].num_seats;
+	TheDistrict.save();	
+	
+	TheOldLegislator = ds.Legislator.query('district_legislators.id= :1', result[t].id)
+	if (TheOldLegislator){TheOldLegislator.remove();}
+	for (var v in result[t].legislators)
+	{
+		TheLegislator =  ds.Legislator.createEntity();
+		TheLegislator.leg_id=result[t].legislators[v].leg_id;
+		TheLegislator.full_name=result[t].legislators[v].full_name;
+		TheLegislator.district_legislators=TheDistrict;
+		TheLegislator.save();
+		}
+	}
+	
+}
 }
 
 
@@ -368,17 +473,29 @@ function TestData(arg){
 		w= v + require('openstates.api_key').openstates_api_key();
 		SaveLegislator(w);
 		break;
+	case 'Committee':
+		v="http://openstates.org/api/v1/committees/MDC000065/?apikey=";
+		w= v + require('openstates.api_key').openstates_api_key();
+		SaveCommittee(w);
+		break;
+	case 'Event':
+		v="http://openstates.org/api/v1/events/?state=tx&type=committee:meeting&apikey=";
+		w= v + require('openstates.api_key').openstates_api_key();
+		SaveEvent(w);
+		break;
+	case 'District':
+		v="http://openstates.org/api/v1/districts/nc/upper/?apikey=";
+		w= v + require('openstates.api_key').openstates_api_key();
+		SaveDistrict(w);
+		break;
 	default:
-		var Table_List = ['Action', 'Bill', 'BillDocument', 'Committee',
-		'District', 'Event', 'Feature_flag', 'Legislator', 'Participant',
-		'Role', 'Session_detail', 'Source', 'Sponsor', 'StateMetadata',
-		'Term', 'Version', 'Vote'	]	
+		return;
 	}	
 }
 //var x = RetrieveData(w).result;
 //var y = GetKeys(x[0]);
 //y;
-ClearOpenStateData('Legislator');
-TestData('Legislator');
+//ClearOpenStateData('Committee');
+TestData('District');
 //RetrieveData("http://openstates.org/api/v1/bills/?q=agriculture&state=ca&chamber=upper&apikey=a7b283f866e94ff0a572ec269c76a32e");
 //RetrieveData("http://openstates.org/api/v1/bills/?q=agriculture&state=ca&chamber=upper&apikey=a7b283f866e94ff0a572ec269c76a32e");

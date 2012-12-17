@@ -810,3 +810,177 @@
 2012-12-15 16:57:46 [com.wakanda-software.Tracker.ServerAdmin] INFO - Closing the project
 2012-12-15 16:57:46 [com.wakanda-software.Tracker.ServerAdmin] INFO - Project closed (duration: 10 ms)
 2012-12-15 16:57:47 [com.wakanda-software.Tracker] INFO - Solution closed (duration: 641 ms)
+2012-12-16 09:23:59 [com.wakanda-software.Tracker] INFO - Opening the solution
+2012-12-16 09:23:59 [com.wakanda-software.Tracker] INFO - Opening the users and groups directory
+2012-12-16 09:23:59 [com.wakanda-software.Tracker] INFO - Users and groups directory opened (duration: 74 ms)
+2012-12-16 09:23:59 [com.wakanda-software.Tracker.Tracker] INFO - Opening the project
+2012-12-16 09:23:59 [com.wakanda-software.Tracker.Tracker] INFO - Opening the database
+2012-12-16 09:23:59 [com.wakanda-software.Tracker.Tracker] INFO - Database opened (duration: 43 ms)
+2012-12-16 09:23:59 [com.wakanda-software.Tracker.Tracker] INFO - Project opened (duration: 78 ms)
+2012-12-16 09:23:59 [com.wakanda-software.Tracker.ServerAdmin] INFO - Opening the project
+2012-12-16 09:23:59 [com.wakanda-software.Tracker.ServerAdmin] INFO - Project opened (duration: 14 ms)
+2012-12-16 09:23:59 [com.wakanda-software.Tracker] INFO - Solution opened (duration: 316 ms)
+2012-12-16 09:23:59 [com.wakanda-software.Tracker] INFO - Starting the solution
+2012-12-16 09:23:59 [com.wakanda-software.Tracker.Tracker] INFO - Starting the project
+2012-12-16 09:23:59 [com.wakanda-software.Tracker.Tracker] INFO - Starting the HTTP server
+2012-12-16 09:23:59 [com.wakanda-software.Tracker.Tracker] INFO - HTTP server started (duration: 134 ms)
+2012-12-16 09:23:59 [com.wakanda-software.Tracker.Tracker] INFO - Project started (duration: 290 ms)
+2012-12-16 09:23:59 [com.wakanda-software.Tracker.ServerAdmin] INFO - Starting the project
+2012-12-16 09:23:59 [com.wakanda-software.Tracker.ServerAdmin] INFO - Starting the HTTP server
+2012-12-16 09:23:59 [com.wakanda-software.Tracker.ServerAdmin] INFO - HTTP server started (duration: 158 ms)
+2012-12-16 09:23:59 [com.wakanda-software.Tracker.ServerAdmin] INFO - Project started (duration: 290 ms)
+2012-12-16 09:23:59 [com.wakanda-software.Tracker.Tracker] INFO - Executing the bootstrap(s)
+2012-12-16 09:23:59 [com.wakanda-software.Tracker.Tracker] INFO - Bootstrap(s) executed (duration: 0 ms)
+2012-12-16 09:23:59 [com.wakanda-software.Tracker.ServerAdmin] INFO - Executing the bootstrap(s)
+2012-12-16 09:24:00 [com.wakanda-software.Tracker.ServerAdmin] INFO - Bootstrap(s) executed (duration: 31 ms)
+2012-12-16 09:24:00 [com.wakanda-software.Tracker] INFO - Solution started (duration: 614 ms)
+2012-12-17 07:03:24 [com.wakanda-software.Tracker.Tracker.JS4D] ERROR - [1] ReferenceError: Can't find variable: varURL, HTTP connection handler
+2012-12-17 07:03:24 [com.wakanda-software.Tracker.Tracker.JS4D] ERROR - [2] Error evaluating javascript file:///C:/Users/dse/Documents/BillTracker/Tracker/Tracker/Modules/OpenStateREST.js, HTTP connection handler
+2012-12-17 07:03:46 [com.wakanda-software.Tracker.Tracker.JS4D] ERROR - [1] ReferenceError: Can't find variable: varURL, HTTP connection handler
+2012-12-17 07:03:46 [com.wakanda-software.Tracker.Tracker.JS4D] ERROR - [2] Error evaluating javascript file:///C:/Users/dse/Documents/BillTracker/Tracker/Tracker/Modules/OpenStateREST.js, HTTP connection handler
+2012-12-17 07:04:29 [com.wakanda-software.Tracker.Tracker.JS4D] ERROR - [1] ReferenceError: Can't find variable: varURL, HTTP connection handler
+2012-12-17 07:04:29 [com.wakanda-software.Tracker.Tracker.JS4D] ERROR - [2] Error evaluating javascript file:///C:/Users/dse/Documents/BillTracker/Tracker/Tracker/Modules/OpenStateREST.js, HTTP connection handler
+2012-12-17 07:27:17 [com.wakanda-software.Tracker.Tracker.JS4D] ERROR - [1] Error: Wrong field reference in database Model, HTTP connection handler
+2012-12-17 07:27:17 [com.wakanda-software.Tracker.Tracker.JS4D] ERROR - [2] Error evaluating javascript file:///C:/Users/dse/Documents/BillTracker/Tracker/Tracker/Modules/OpenStateREST.js, HTTP connection handler
+2012-12-17 07:27:21 [com.wakanda-software.Tracker.Tracker] INFO - Closing the database
+2012-12-17 07:27:22 [com.wakanda-software.Tracker.Tracker] INFO - Database closed (duration: 411 ms)
+2012-12-17 07:27:22 [com.wakanda-software.Tracker.Tracker] INFO - Opening the database
+2012-12-17 07:27:22 [com.wakanda-software.Tracker.Tracker] INFO - Database opened (duration: 53 ms)
+2012-12-17 07:59:59 [com.wakanda-software.Tracker.Tracker] INFO - Closing the database
+2012-12-17 07:59:59 [com.wakanda-software.Tracker.Tracker] INFO - Database closed (duration: 405 ms)
+2012-12-17 07:59:59 [com.wakanda-software.Tracker.Tracker] INFO - Opening the database
+2012-12-17 07:59:59 [com.wakanda-software.Tracker.Tracker] INFO - Database opened (duration: 51 ms)
+2012-12-17 14:27:24 [com.wakanda-software.Tracker.Tracker.JS4D] ERROR - [1] Error: Wrong field reference in database Model, HTTP connection handler
+2012-12-17 14:27:24 [com.wakanda-software.Tracker.Tracker.JS4D] ERROR - [2] Error evaluating javascript file:///C:/Users/dse/Documents/BillTracker/Tracker/Tracker/Modules/OpenStateREST.js, HTTP connection handler
+2012-12-17 14:40:42 [com.wakanda-software.Tracker.Tracker.JS4D] ERROR - [1] ReferenceError: Can't find variable: TheBillSubject, HTTP connection handler
+2012-12-17 14:40:42 [com.wakanda-software.Tracker.Tracker.JS4D] ERROR - [2] Error evaluating javascript file:///C:/Users/dse/Documents/BillTracker/Tracker/Tracker/Modules/OpenStateREST.js, HTTP connection handler
+2012-12-17 14:51:00 [com.wakanda-software.Tracker.Tracker.JS4D] ERROR - [1] TypeError: 'undefined' is not an object (evaluating 'result[t].leg_id'), HTTP connection handler
+2012-12-17 14:51:00 [com.wakanda-software.Tracker.Tracker.JS4D] ERROR - [2] Error evaluating javascript file:///C:/Users/dse/Documents/BillTracker/Tracker/Tracker/Modules/OpenStateREST.js, HTTP connection handler
+2012-12-17 14:54:31 [com.wakanda-software.Tracker.Tracker] INFO - Closing the database
+2012-12-17 14:54:32 [com.wakanda-software.Tracker.Tracker] INFO - Database closed (duration: 406 ms)
+2012-12-17 14:54:32 [com.wakanda-software.Tracker.Tracker] INFO - Opening the database
+2012-12-17 14:54:32 [com.wakanda-software.Tracker.Tracker] INFO - Database opened (duration: 61 ms)
+2012-12-17 14:54:34 [com.wakanda-software.Tracker.Tracker] INFO - Closing the database
+2012-12-17 14:54:35 [com.wakanda-software.Tracker.Tracker] INFO - Database closed (duration: 437 ms)
+2012-12-17 14:54:35 [com.wakanda-software.Tracker.Tracker] INFO - Opening the database
+2012-12-17 14:54:35 [com.wakanda-software.Tracker.Tracker] INFO - Database opened (duration: 51 ms)
+2012-12-17 15:30:23 [com.wakanda-software.Tracker.Tracker.JS4D] ERROR - [1] TypeError: 'undefined' is not an object (evaluating 'ds.Sources.query'), HTTP connection handler
+2012-12-17 15:30:23 [com.wakanda-software.Tracker.Tracker.JS4D] ERROR - [2] Error evaluating javascript file:///C:/Users/dse/Documents/BillTracker/Tracker/Tracker/Modules/OpenStateREST.js, HTTP connection handler
+2012-12-17 15:32:21 [com.wakanda-software.Tracker.Tracker.JS4D] ERROR - [1] TypeError: 'undefined' is not an object (evaluating 'ds.Sources.query'), HTTP connection handler
+2012-12-17 15:32:21 [com.wakanda-software.Tracker.Tracker.JS4D] ERROR - [2] Error evaluating javascript file:///C:/Users/dse/Documents/BillTracker/Tracker/Tracker/Modules/OpenStateREST.js, HTTP connection handler
+2012-12-17 16:01:08 [com.wakanda-software.Tracker.Tracker] INFO - Closing the database
+2012-12-17 16:01:08 [com.wakanda-software.Tracker.Tracker] INFO - Database closed (duration: 406 ms)
+2012-12-17 16:01:08 [com.wakanda-software.Tracker.Tracker] INFO - Opening the database
+2012-12-17 16:01:08 [com.wakanda-software.Tracker.Tracker] INFO - Database opened (duration: 54 ms)
+2012-12-17 19:03:18 [com.wakanda-software.Tracker.Tracker.JS4D] ERROR - [1] Error on line 459. SyntaxError: Expected token '}', HTTP connection handler
+2012-12-17 19:03:18 [com.wakanda-software.Tracker.Tracker.JS4D] ERROR - [2] Error evaluating javascript file:///C:/Users/dse/Documents/BillTracker/Tracker/Tracker/Modules/OpenStateREST.js, HTTP connection handler
+2012-12-17 19:03:59 [com.wakanda-software.Tracker.Tracker.JS4D] ERROR - [1] Error on line 459. SyntaxError: Expected token '}', HTTP connection handler
+2012-12-17 19:03:59 [com.wakanda-software.Tracker.Tracker.JS4D] ERROR - [2] Error evaluating javascript file:///C:/Users/dse/Documents/BillTracker/Tracker/Tracker/Modules/OpenStateREST.js, HTTP connection handler
+2012-12-17 19:09:14 [com.wakanda-software.Tracker] INFO - Stopping the solution
+2012-12-17 19:09:14 [com.wakanda-software.Tracker.Tracker] INFO - Stopping the project
+2012-12-17 19:09:17 [com.wakanda-software.Tracker.Tracker] INFO - Project stopped (duration: 2196 ms)
+2012-12-17 19:09:17 [com.wakanda-software.Tracker.ServerAdmin] INFO - Stopping the project
+2012-12-17 19:09:19 [com.wakanda-software.Tracker.ServerAdmin] INFO - Project stopped (duration: 2079 ms)
+2012-12-17 19:09:19 [com.wakanda-software.Tracker] INFO - Solution stopped (duration: 4276 ms)
+2012-12-17 19:09:19 [com.wakanda-software.Tracker] INFO - Closing the solution
+2012-12-17 19:09:19 [com.wakanda-software.Tracker.Tracker] INFO - Closing the project
+2012-12-17 19:09:19 [com.wakanda-software.Tracker.Tracker] INFO - Closing the database
+2012-12-17 19:09:19 [com.wakanda-software.Tracker.Tracker] INFO - Database closed (duration: 418 ms)
+2012-12-17 19:09:19 [com.wakanda-software.Tracker.Tracker] INFO - Project closed (duration: 423 ms)
+2012-12-17 19:09:19 [com.wakanda-software.Tracker.ServerAdmin] INFO - Closing the project
+2012-12-17 19:09:19 [com.wakanda-software.Tracker.ServerAdmin] INFO - Project closed (duration: 9 ms)
+2012-12-17 19:09:20 [com.wakanda-software.Tracker] INFO - Solution closed (duration: 775 ms)
+2012-12-18 07:04:31 [com.wakanda-software.Tracker] INFO - Opening the solution
+2012-12-18 07:04:31 [com.wakanda-software.Tracker] INFO - Opening the users and groups directory
+2012-12-18 07:04:32 [com.wakanda-software.Tracker] INFO - Users and groups directory opened (duration: 57 ms)
+2012-12-18 07:04:32 [com.wakanda-software.Tracker.Tracker] INFO - Opening the project
+2012-12-18 07:04:32 [com.wakanda-software.Tracker.Tracker] INFO - Opening the database
+2012-12-18 07:04:32 [com.wakanda-software.Tracker.Tracker] INFO - Database opened (duration: 62 ms)
+2012-12-18 07:04:32 [com.wakanda-software.Tracker.Tracker] INFO - Project opened (duration: 104 ms)
+2012-12-18 07:04:32 [com.wakanda-software.Tracker.ServerAdmin] INFO - Opening the project
+2012-12-18 07:04:32 [com.wakanda-software.Tracker.ServerAdmin] INFO - Project opened (duration: 22 ms)
+2012-12-18 07:04:32 [com.wakanda-software.Tracker] INFO - Solution opened (duration: 378 ms)
+2012-12-18 07:04:32 [com.wakanda-software.Tracker] INFO - Starting the solution
+2012-12-18 07:04:32 [com.wakanda-software.Tracker.Tracker] INFO - Starting the project
+2012-12-18 07:04:32 [com.wakanda-software.Tracker.Tracker] INFO - Starting the HTTP server
+2012-12-18 07:04:32 [com.wakanda-software.Tracker.Tracker] INFO - HTTP server started (duration: 150 ms)
+2012-12-18 07:04:32 [com.wakanda-software.Tracker.Tracker] INFO - Project started (duration: 513 ms)
+2012-12-18 07:04:32 [com.wakanda-software.Tracker.ServerAdmin] INFO - Starting the project
+2012-12-18 07:04:32 [com.wakanda-software.Tracker.ServerAdmin] INFO - Starting the HTTP server
+2012-12-18 07:04:33 [com.wakanda-software.Tracker.ServerAdmin] INFO - HTTP server started (duration: 231 ms)
+2012-12-18 07:04:33 [com.wakanda-software.Tracker.ServerAdmin] INFO - Project started (duration: 445 ms)
+2012-12-18 07:04:33 [com.wakanda-software.Tracker.Tracker] INFO - Executing the bootstrap(s)
+2012-12-18 07:04:33 [com.wakanda-software.Tracker.Tracker] INFO - Bootstrap(s) executed (duration: 0 ms)
+2012-12-18 07:04:33 [com.wakanda-software.Tracker.ServerAdmin] INFO - Executing the bootstrap(s)
+2012-12-18 07:04:33 [com.wakanda-software.Tracker.ServerAdmin] INFO - Bootstrap(s) executed (duration: 39 ms)
+2012-12-18 07:04:33 [com.wakanda-software.Tracker] INFO - Solution started (duration: 999 ms)
+2012-12-18 07:41:39 [com.wakanda-software.Tracker.Tracker] INFO - Closing the database
+2012-12-18 07:41:40 [com.wakanda-software.Tracker.Tracker] INFO - Database closed (duration: 409 ms)
+2012-12-18 07:41:40 [com.wakanda-software.Tracker.Tracker] INFO - Opening the database
+2012-12-18 07:41:40 [com.wakanda-software.Tracker.Tracker] INFO - Database opened (duration: 56 ms)
+2012-12-18 07:49:05 [com.wakanda-software.Tracker.Tracker] INFO - Closing the database
+2012-12-18 07:49:06 [com.wakanda-software.Tracker.Tracker] INFO - Database closed (duration: 420 ms)
+2012-12-18 07:49:06 [com.wakanda-software.Tracker.Tracker] INFO - Opening the database
+2012-12-18 07:49:06 [com.wakanda-software.Tracker.Tracker] INFO - Database opened (duration: 72 ms)
+2012-12-18 08:05:12 [com.wakanda-software.Tracker.Tracker.JS4D] ERROR - [1] Error: Wrong field reference in database Model, HTTP connection handler
+2012-12-18 08:05:12 [com.wakanda-software.Tracker.Tracker.JS4D] ERROR - [2] Error evaluating javascript file:///C:/Users/dse/Documents/BillTracker/Tracker/Tracker/Modules/OpenStateREST.js, HTTP connection handler
+2012-12-18 08:05:12 [com.wakanda-software.Tracker.Tracker] INFO - Closing the database
+2012-12-18 08:05:12 [com.wakanda-software.Tracker.Tracker] INFO - Database closed (duration: 464 ms)
+2012-12-18 08:05:12 [com.wakanda-software.Tracker.Tracker] INFO - Opening the database
+2012-12-18 08:05:12 [com.wakanda-software.Tracker.Tracker] INFO - Database opened (duration: 61 ms)
+2012-12-18 08:05:22 [com.wakanda-software.Tracker] INFO - Stopping the solution
+2012-12-18 08:05:22 [com.wakanda-software.Tracker.Tracker] INFO - Stopping the project
+2012-12-18 08:05:24 [com.wakanda-software.Tracker.Tracker] INFO - Project stopped (duration: 2088 ms)
+2012-12-18 08:05:24 [com.wakanda-software.Tracker.ServerAdmin] INFO - Stopping the project
+2012-12-18 08:05:26 [com.wakanda-software.Tracker.ServerAdmin] INFO - Project stopped (duration: 2151 ms)
+2012-12-18 08:05:26 [com.wakanda-software.Tracker] INFO - Solution stopped (duration: 4241 ms)
+2012-12-18 08:05:26 [com.wakanda-software.Tracker] INFO - Closing the solution
+2012-12-18 08:05:26 [com.wakanda-software.Tracker.Tracker] INFO - Closing the project
+2012-12-18 08:05:26 [com.wakanda-software.Tracker.Tracker] INFO - Closing the database
+2012-12-18 08:05:26 [com.wakanda-software.Tracker.Tracker] INFO - Database closed (duration: 423 ms)
+2012-12-18 08:05:26 [com.wakanda-software.Tracker.Tracker] INFO - Project closed (duration: 427 ms)
+2012-12-18 08:05:26 [com.wakanda-software.Tracker.ServerAdmin] INFO - Closing the project
+2012-12-18 08:05:26 [com.wakanda-software.Tracker.ServerAdmin] INFO - Project closed (duration: 6 ms)
+2012-12-18 08:05:27 [com.wakanda-software.Tracker] INFO - Solution closed (duration: 1097 ms)
+2012-12-18 08:08:54 [com.wakanda-software.Tracker] INFO - Opening the solution
+2012-12-18 08:08:54 [com.wakanda-software.Tracker] INFO - Opening the users and groups directory
+2012-12-18 08:08:54 [com.wakanda-software.Tracker] INFO - Users and groups directory opened (duration: 46 ms)
+2012-12-18 08:08:54 [com.wakanda-software.Tracker.Tracker] INFO - Opening the project
+2012-12-18 08:08:54 [com.wakanda-software.Tracker.Tracker] INFO - Opening the database
+2012-12-18 08:08:54 [com.wakanda-software.Tracker.Tracker] INFO - Database opened (duration: 57 ms)
+2012-12-18 08:08:54 [com.wakanda-software.Tracker.Tracker] INFO - Project opened (duration: 88 ms)
+2012-12-18 08:08:54 [com.wakanda-software.Tracker.ServerAdmin] INFO - Opening the project
+2012-12-18 08:08:54 [com.wakanda-software.Tracker.ServerAdmin] INFO - Project opened (duration: 14 ms)
+2012-12-18 08:08:54 [com.wakanda-software.Tracker] INFO - Solution opened (duration: 298 ms)
+2012-12-18 08:08:54 [com.wakanda-software.Tracker] INFO - Starting the solution
+2012-12-18 08:08:54 [com.wakanda-software.Tracker.Tracker] INFO - Starting the project
+2012-12-18 08:08:54 [com.wakanda-software.Tracker.Tracker] INFO - Starting the HTTP server
+2012-12-18 08:08:54 [com.wakanda-software.Tracker.Tracker] INFO - HTTP server started (duration: 125 ms)
+2012-12-18 08:08:54 [com.wakanda-software.Tracker.Tracker] INFO - Project started (duration: 239 ms)
+2012-12-18 08:08:54 [com.wakanda-software.Tracker.ServerAdmin] INFO - Starting the project
+2012-12-18 08:08:54 [com.wakanda-software.Tracker.ServerAdmin] INFO - Starting the HTTP server
+2012-12-18 08:08:54 [com.wakanda-software.Tracker.ServerAdmin] INFO - HTTP server started (duration: 195 ms)
+2012-12-18 08:08:54 [com.wakanda-software.Tracker.ServerAdmin] INFO - Project started (duration: 337 ms)
+2012-12-18 08:08:54 [com.wakanda-software.Tracker.Tracker] INFO - Executing the bootstrap(s)
+2012-12-18 08:08:54 [com.wakanda-software.Tracker.Tracker] INFO - Bootstrap(s) executed (duration: 0 ms)
+2012-12-18 08:08:54 [com.wakanda-software.Tracker.ServerAdmin] INFO - Executing the bootstrap(s)
+2012-12-18 08:08:54 [com.wakanda-software.Tracker.ServerAdmin] INFO - Bootstrap(s) executed (duration: 34 ms)
+2012-12-18 08:08:54 [com.wakanda-software.Tracker] INFO - Solution started (duration: 614 ms)
+2012-12-18 08:17:07 [com.wakanda-software.Tracker.Tracker.JS4D] ERROR - [1] ReferenceError: Can't find variable: TheBillType, HTTP connection handler
+2012-12-18 08:17:07 [com.wakanda-software.Tracker.Tracker.JS4D] ERROR - [2] Error evaluating javascript file:///C:/Users/dse/Documents/BillTracker/Tracker/Tracker/Modules/OpenStateREST.js, HTTP connection handler
+2012-12-18 08:17:34 [com.wakanda-software.Tracker.Tracker.JS4D] ERROR - [1] ReferenceError: Can't find variable: TheBillType, HTTP connection handler
+2012-12-18 08:17:34 [com.wakanda-software.Tracker.Tracker.JS4D] ERROR - [2] Error evaluating javascript file:///C:/Users/dse/Documents/BillTracker/Tracker/Tracker/Modules/OpenStateREST.js, HTTP connection handler
+2012-12-18 08:22:49 [com.wakanda-software.Tracker] INFO - Stopping the solution
+2012-12-18 08:22:49 [com.wakanda-software.Tracker.Tracker] INFO - Stopping the project
+2012-12-18 08:22:51 [com.wakanda-software.Tracker.Tracker] INFO - Project stopped (duration: 2098 ms)
+2012-12-18 08:22:51 [com.wakanda-software.Tracker.ServerAdmin] INFO - Stopping the project
+2012-12-18 08:22:53 [com.wakanda-software.Tracker.ServerAdmin] INFO - Project stopped (duration: 2093 ms)
+2012-12-18 08:22:53 [com.wakanda-software.Tracker] INFO - Solution stopped (duration: 4192 ms)
+2012-12-18 08:22:53 [com.wakanda-software.Tracker] INFO - Closing the solution
+2012-12-18 08:22:53 [com.wakanda-software.Tracker.Tracker] INFO - Closing the project
+2012-12-18 08:22:53 [com.wakanda-software.Tracker.Tracker] INFO - Closing the database
+2012-12-18 08:22:53 [com.wakanda-software.Tracker.Tracker] INFO - Database closed (duration: 405 ms)
+2012-12-18 08:22:53 [com.wakanda-software.Tracker.Tracker] INFO - Project closed (duration: 410 ms)
+2012-12-18 08:22:53 [com.wakanda-software.Tracker.ServerAdmin] INFO - Closing the project
+2012-12-18 08:22:53 [com.wakanda-software.Tracker.ServerAdmin] INFO - Project closed (duration: 8 ms)
+2012-12-18 08:22:54 [com.wakanda-software.Tracker] INFO - Solution closed (duration: 722 ms)
