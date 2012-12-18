@@ -8,11 +8,11 @@
 
 		<panel ____objectunic="true" isOpen="false" pathVisible="true">
 
-			<position ____objectunic="true" X="31" Y="343"/>
+			<position ____objectunic="true" X="43" Y="60"/>
 </panel>
 </extraProperties>
 
-	<attributes name="ID" kind="storage" scope="public" uuid="02359C647EB0234DB52ADAACE74DB142" fieldPos="1" unique="true" autosequence="true" type="long" primKey="true"/>
+	<attributes name="ID" kind="storage" scope="public" uuid="BF7B096D1B45854FBA288774566CDBA6" fieldPos="7" unique="true" autogenerate="true" type="uuid" primKey="true"/>
 
 	<attributes name="action_date" kind="storage" scope="public" uuid="8A19826EC7E56440B262FF202AAC1AC0" fieldPos="2" type="date"/>
 
@@ -22,7 +22,7 @@
 
 	<attributes name="type" kind="storage" scope="public" uuid="AC8BF5E32B1F9A44B245A139D5FB780B" fieldPos="5" type="string"/>
 
-	<attributes name="bill_action" kind="relatedEntity" scope="public" type="Bill" uuid="CA723A17C7167343B5EFB4A78FCB5327" fieldPos="6" path="Bill"/>
+	<attributes name="bill_action" kind="relatedEntity" scope="public" type="Bill" uuid="CA723A17C7167343B5EFB4A78FCB5327" fieldPos="1" path="Bill"/>
 
 </dataClasses>
 
@@ -32,11 +32,11 @@
 
 		<panel ____objectunic="true" isOpen="false" pathVisible="true">
 
-			<position ____objectunic="true" X="32" Y="10"/>
+			<position ____objectunic="true" X="69" Y="6"/>
 </panel>
 </extraProperties>
 
-	<attributes name="ID" kind="storage" scope="public" uuid="0DB36395EEDB2D48887B31DEC10A7C10" fieldPos="1" unique="true" autosequence="true" type="long" primKey="true"/>
+	<attributes name="ID" kind="storage" scope="public" uuid="1630A884215BA745AFBBE865DE6543DB" fieldPos="10" unique="true" autogenerate="true" type="uuid" primKey="true"/>
 
 	<attributes name="title" kind="storage" scope="public" uuid="D584902DE5566C4AADEF17D36E4ADB61" fieldPos="2" type="string"/>
 
@@ -78,17 +78,17 @@
 
 		<panel ____objectunic="true" isOpen="false" pathVisible="true">
 
-			<position ____objectunic="true" X="325" Y="20"/>
+			<position ____objectunic="true" X="56" Y="17"/>
 </panel>
 </extraProperties>
 
-	<attributes name="ID" kind="storage" scope="public" uuid="B42D92E490463E4AA1F8C217124E671E" fieldPos="1" unique="true" autosequence="true" type="long" primKey="true"/>
+	<attributes name="ID" kind="storage" scope="public" uuid="C7A99E609A04F8459324CB8FDCAA6FC4" fieldPos="5" unique="true" autogenerate="true" type="uuid" primKey="true"/>
 
 	<attributes name="url" kind="storage" scope="public" uuid="ED0EFFBFDEC5EA4D9E95B88D5841CC20" fieldPos="2" type="string"/>
 
 	<attributes name="name" kind="storage" scope="public" uuid="0E0FDC11DB17B44A9565F0CB14332DC6" fieldPos="3" type="string"/>
 
-	<attributes name="bill_document" kind="relatedEntity" scope="public" type="Bill" uuid="D2981A190BB9164A9DC58338DD83CAEC" fieldPos="4" path="Bill"/>
+	<attributes name="bill_document" kind="relatedEntity" scope="public" type="Bill" uuid="D2981A190BB9164A9DC58338DD83CAEC" fieldPos="1" path="Bill"/>
 
 </dataClasses>
 
@@ -98,15 +98,15 @@
 
 		<panel ____objectunic="true" isOpen="false" pathVisible="true">
 
-			<position ____objectunic="true" X="310" Y="166"/>
+			<position ____objectunic="true" X="58" Y="45"/>
 </panel>
 </extraProperties>
 
-	<attributes name="ID" kind="storage" scope="public" uuid="AEFCD6E52BCFD549BF0D56346F767DC2" fieldPos="1" unique="true" autosequence="true" type="long" primKey="true"/>
+	<attributes name="ID" kind="storage" scope="public" uuid="AB4EE614BE242D4F98B0BC2788BCF0F7" fieldPos="4" unique="true" autogenerate="true" type="uuid" primKey="true"/>
 
 	<attributes name="subject" kind="storage" scope="public" uuid="81145FF0609D544FBF8C578ADE9AFBF3" fieldPos="2" type="string"/>
 
-	<attributes name="bill" kind="relatedEntity" scope="public" type="Bill" uuid="349CE337F2544A46A7862751318286D8" fieldPos="3" path="Bill"/>
+	<attributes name="bill" kind="relatedEntity" scope="public" type="Bill" uuid="349CE337F2544A46A7862751318286D8" fieldPos="1" path="Bill"/>
 
 </dataClasses>
 
@@ -116,13 +116,13 @@
 
 		<panel ____objectunic="true" isOpen="false" pathVisible="true">
 
-			<position ____objectunic="true" X="308" Y="13"/>
+			<position ____objectunic="true" X="37" Y="30"/>
 </panel>
 </extraProperties>
 
-	<attributes name="ID" kind="storage" scope="public" uuid="92EB1A62C7735048BCE72835B2ABED07" fieldPos="1" unique="true" autosequence="true" type="long" primKey="true"/>
+	<attributes name="ID" kind="storage" scope="public" uuid="AA3498589B2F574BA9C1DCDA6AD779D6" fieldPos="4" unique="true" autogenerate="true" type="uuid" primKey="true"/>
 
-	<attributes name="bill_type" kind="relatedEntity" scope="public" type="Bill" uuid="8689FCD8F1BEED4397ED99642D76B7A7" fieldPos="3" path="Bill"/>
+	<attributes name="bill_type" kind="relatedEntity" scope="public" type="Bill" uuid="8689FCD8F1BEED4397ED99642D76B7A7" fieldPos="1" path="Bill"/>
 
 	<attributes name="type" kind="storage" scope="public" uuid="BF2971B308E3894ABC2F575836F7969D" fieldPos="2" type="string"/>
 
@@ -134,15 +134,15 @@
 
 		<panel ____objectunic="true" isOpen="false" pathVisible="true">
 
-			<position ____objectunic="true" X="10" Y="5"/>
+			<position ____objectunic="true" X="60" Y="6"/>
 </panel>
 </extraProperties>
 
-	<attributes name="ID" kind="storage" scope="public" uuid="AA6AD462BAD40D4CA4858A2D1A573D7D" fieldPos="1" unique="true" autosequence="true" type="long" primKey="true"/>
+	<attributes name="ID" kind="storage" scope="public" uuid="B1D776305901D94CBA1F05FED81AD23D" fieldPos="15" unique="true" autogenerate="true" type="uuid" primKey="true"/>
 
 	<attributes name="committee_id" kind="storage" scope="public" uuid="F225FBF01D67ED40986C38CC1BAF8566" fieldPos="2" type="string"/>
 
-	<attributes name="state" kind="relatedEntity" scope="public" type="StateMetadata" uuid="A4C697BBA8653A4C8DAA5255EB6739CA" fieldPos="3" path="StateMetadata"/>
+	<attributes name="state" kind="relatedEntity" scope="public" type="StateMetadata" uuid="A4C697BBA8653A4C8DAA5255EB6739CA" fieldPos="1" path="StateMetadata"/>
 
 	<attributes name="committee" kind="storage" scope="public" uuid="7CFDB03569F33441A035800E8642BD23" fieldPos="4" type="string"/>
 
@@ -178,15 +178,15 @@
 
 	<extraProperties ____objectunic="true" panelColor="#CCC1D9">
 
-		<panel ____objectunic="true" isOpen="true" pathVisible="true">
+		<panel ____objectunic="true" isOpen="false" pathVisible="true">
 
-			<position ____objectunic="true" X="12" Y="8"/>
+			<position ____objectunic="true" X="75" Y="12"/>
 </panel>
 </extraProperties>
 
-	<attributes name="ID" kind="storage" scope="public" uuid="AB50C2BDBDA09E4992131E36DCE01E93" fieldPos="1" unique="true" autosequence="true" type="long" primKey="true"/>
+	<attributes name="ID" kind="storage" scope="public" uuid="BDD6EC4353005846B3122EDA236EA95D" fieldPos="8" unique="true" autogenerate="true" type="uuid" primKey="true"/>
 
-	<attributes name="id" scope="public" uuid="5129D0EFA1C19643A1F936FB259B5FF9" fieldPos="7" type="string" kind="storage"/>
+	<attributes name="id" kind="storage" scope="public" uuid="5129D0EFA1C19643A1F936FB259B5FF9" fieldPos="7" type="string"/>
 
 	<attributes name="name" kind="storage" scope="public" uuid="DA59276D4B32814AAF2E3F57087F810A" fieldPos="2" type="string"/>
 
@@ -196,9 +196,9 @@
 
 	<attributes name="boundary_id" kind="storage" scope="public" uuid="1F009770656F5D41BA9F484A657E7684" fieldPos="5" type="string"/>
 
-	<attributes name="abbr" scope="public" uuid="45D8FB053234BB49888D2F6AD236015A" fieldPos="6" type="string" kind="storage"/>
+	<attributes name="abbr" kind="storage" scope="public" uuid="45D8FB053234BB49888D2F6AD236015A" fieldPos="6" type="string"/>
 
-	<attributes name="legislators" scope="public" reversePath="true" path="district_legislators" type="Legislators" kind="relatedEntities"/>
+	<attributes name="legislators" kind="relatedEntities" scope="public" type="Legislators" reversePath="true" path="district_legislators"/>
 
 </dataClasses>
 
@@ -208,11 +208,11 @@
 
 		<panel ____objectunic="true" isOpen="false" pathVisible="true">
 
-			<position ____objectunic="true" X="13" Y="36"/>
+			<position ____objectunic="true" X="57" Y="31"/>
 </panel>
 </extraProperties>
 
-	<attributes name="ID" kind="storage" scope="public" uuid="D9A2700E66815C49BEA9BC90799539F1" fieldPos="1" unique="true" autosequence="true" type="long" primKey="true"/>
+	<attributes name="ID" scope="public" uuid="A36D60050E207347B1A7E54B9398A55A" fieldPos="8" type="uuid" kind="storage" autogenerate="true" primKey="true" unique="true"/>
 
 	<attributes name="id" kind="storage" scope="public" uuid="1BE701CA3BAC5E4A9EE5BB4DAEE0FE33" fieldPos="2" type="string"/>
 
@@ -238,11 +238,11 @@
 
 		<panel ____objectunic="true" isOpen="false" pathVisible="true">
 
-			<position ____objectunic="true" X="310" Y="255"/>
+			<position ____objectunic="true" X="53" Y="48"/>
 </panel>
 </extraProperties>
 
-	<attributes name="ID" kind="storage" scope="public" uuid="19CEB1E3CF43F545B126772053759A95" fieldPos="1" unique="true" autosequence="true" type="long" primKey="true"/>
+	<attributes name="ID" scope="public" uuid="296753ED636F4E4C81EBC17896BC6082" fieldPos="4" type="uuid" kind="storage" autogenerate="true" primKey="true" unique="true"/>
 
 	<attributes name="subjects" kind="storage" scope="public" uuid="52C797868CB0444ABE7A1EC0F2CBB737" fieldPos="3" type="string"/>
 
@@ -254,13 +254,13 @@
 
 	<extraProperties ____objectunic="true" panelColor="#BFBFBF">
 
-		<panel ____objectunic="true" isOpen="true" pathVisible="true">
+		<panel ____objectunic="true" isOpen="false" pathVisible="true">
 
-			<position ____objectunic="true" X="234" Y="5"/>
+			<position ____objectunic="true" X="36" Y="5"/>
 </panel>
 </extraProperties>
 
-	<attributes name="ID" kind="storage" scope="public" uuid="15705442ED749045AD04EB66665CC04F" fieldPos="1" unique="true" autosequence="true" type="long" primKey="true"/>
+	<attributes name="ID" scope="public" uuid="87364753969786428A80F639872938F2" fieldPos="19" type="uuid" kind="storage" autogenerate="true" primKey="true" unique="true"/>
 
 	<attributes name="id" kind="storage" scope="public" uuid="D42F05B2E0EE9F41BD5FD6A4EAC333DE" fieldPos="18" type="string"/>
 
@@ -298,7 +298,7 @@
 
 	<attributes name="committees" kind="relatedEntity" scope="public" type="Committee" uuid="02C81A4D143C2543949C7BED61B1A346" fieldPos="16" path="Committee"/>
 
-	<attributes name="district_legislators" scope="public" uuid="32F9FB9E1B59F247B561F5F3D6F9DCC1" fieldPos="17" type="District" kind="relatedEntity" path="District"/>
+	<attributes name="district_legislators" kind="relatedEntity" scope="public" type="District" uuid="32F9FB9E1B59F247B561F5F3D6F9DCC1" fieldPos="17" path="District"/>
 
 </dataClasses>
 
@@ -306,13 +306,13 @@
 
 	<extraProperties ____objectunic="true" panelColor="#7F7F7F">
 
-		<panel ____objectunic="true" isOpen="false" pathVisible="true" resizedHeight="187">
+		<panel ____objectunic="true" isOpen="false" pathVisible="true" resizedHeight="">
 
-			<position ____objectunic="true" X="283" Y="9"/>
+			<position ____objectunic="true" X="32" Y="14"/>
 </panel>
 </extraProperties>
 
-	<attributes name="ID" kind="storage" scope="public" uuid="F23F351CFF58874DAC8EDF6D5FF7B882" fieldPos="1" unique="true" autosequence="true" type="long" primKey="true"/>
+	<attributes name="ID" scope="public" uuid="AB97B089B3DBBE42B4070533D7EB3401" fieldPos="6" type="uuid" kind="storage" autogenerate="true" primKey="true" unique="true"/>
 
 	<attributes name="leg_id" kind="storage" scope="public" uuid="5032F2305FEBB44B81A75ACD5A7990E2" fieldPos="2" type="string"/>
 
@@ -330,11 +330,11 @@
 
 		<panel ____objectunic="true" isOpen="false" pathVisible="true">
 
-			<position ____objectunic="true" X="305" Y="20"/>
+			<position ____objectunic="true" X="54" Y="17"/>
 </panel>
 </extraProperties>
 
-	<attributes name="ID" kind="storage" scope="public" uuid="A96BFA349E0D9B4CBFD3CEC17AB3A611" fieldPos="1" unique="true" autosequence="true" type="long" primKey="true"/>
+	<attributes name="ID" scope="public" uuid="6F118DEE5401E04DB477B3F6CFF9CAF5" fieldPos="5" type="uuid" kind="storage" autogenerate="true" primKey="true" unique="true"/>
 
 	<attributes name="type" kind="storage" scope="public" uuid="2D85628D5AB98F40B9476437BAAF7789" fieldPos="2" type="string"/>
 
@@ -350,11 +350,11 @@
 
 		<panel ____objectunic="true" isOpen="false" pathVisible="true">
 
-			<position ____objectunic="true" X="147" Y="207"/>
+			<position ____objectunic="true" X="29" Y="45"/>
 </panel>
 </extraProperties>
 
-	<attributes name="ID" kind="storage" scope="public" uuid="DCC7BF2D5079B94595965C35E5ECF30E" fieldPos="1" unique="true" autosequence="true" type="long" primKey="true"/>
+	<attributes name="ID" scope="public" uuid="061502154D35E346B16BE0EDE83BA768" fieldPos="11" type="uuid" kind="storage" autogenerate="true" primKey="true" unique="true"/>
 
 	<attributes name="type" kind="storage" scope="public" uuid="A8F944CF9018834ABD61B31FEC3B1911" fieldPos="2" type="string"/>
 
@@ -382,11 +382,11 @@
 
 		<panel ____objectunic="true" isOpen="false" pathVisible="true">
 
-			<position ____objectunic="true" X="373" Y="36"/>
+			<position ____objectunic="true" X="32" Y="26"/>
 </panel>
 </extraProperties>
 
-	<attributes name="ID" kind="storage" scope="public" uuid="16F4262D9CB63E44A5AF5DA9522696A0" fieldPos="1" unique="true" autosequence="true" type="long" primKey="true"/>
+	<attributes name="ID" scope="public" uuid="74FBC098E72B364FBBFF1EF53BF99BEF" fieldPos="4" type="uuid" kind="storage" autogenerate="true" primKey="true" unique="true"/>
 
 	<attributes name="display_name" kind="storage" scope="public" uuid="D6E368444FCBD842A2BF6D9DD685E296" fieldPos="2" type="string"/>
 
@@ -400,11 +400,11 @@
 
 		<panel ____objectunic="true" isOpen="false" pathVisible="true">
 
-			<position ____objectunic="true" X="269" Y="27"/>
+			<position ____objectunic="true" X="62" Y="26"/>
 </panel>
 </extraProperties>
 
-	<attributes name="ID" kind="storage" scope="public" uuid="8FC73311418E08478ED8DC21378F3BE2" fieldPos="1" unique="true" autosequence="true" type="long" primKey="true"/>
+	<attributes name="ID" scope="public" uuid="E342330A44E09D40ABEFF375B71658E4" fieldPos="7" type="uuid" kind="storage" autogenerate="true" primKey="true" unique="true"/>
 
 	<attributes name="url" kind="storage" scope="public" uuid="65B5726634637A428D0E2036578D3383" fieldPos="2" type="string"/>
 
@@ -424,11 +424,11 @@
 
 		<panel ____objectunic="true" isOpen="false" pathVisible="true">
 
-			<position ____objectunic="true" X="326" Y="16"/>
+			<position ____objectunic="true" X="78" Y="251"/>
 </panel>
 </extraProperties>
 
-	<attributes name="ID" kind="storage" scope="public" uuid="F5CBF52A8A72CC4D9F5026251713F594" fieldPos="1" unique="true" autosequence="true" type="long" primKey="true"/>
+	<attributes name="ID" scope="public" uuid="F37C091F3FB48D428FD17B68F5D2ECBB" fieldPos="6" type="uuid" kind="storage" autogenerate="true" primKey="true" unique="true"/>
 
 	<attributes name="leg_id" kind="storage" scope="public" uuid="E5BA14C3BB9A634F9167E65CE8351CF7" fieldPos="2" type="string"/>
 
@@ -446,11 +446,11 @@
 
 		<panel ____objectunic="true" isOpen="false" pathVisible="true" resizedHeight="">
 
-			<position ____objectunic="true" X="478" Y="34"/>
+			<position ____objectunic="true" X="493" Y="12"/>
 </panel>
 </extraProperties>
 
-	<attributes name="ID" kind="storage" scope="public" uuid="701DDE3640302E4F8DCE7537BEDB7604" fieldPos="1" unique="true" autosequence="true" type="long" primKey="true"/>
+	<attributes name="ID" scope="public" uuid="8660413ECFA26D45B9EF2D74BDADF5DE" fieldPos="14" type="uuid" kind="storage" autogenerate="true" primKey="true" unique="true"/>
 
 	<attributes name="id" kind="storage" scope="public" uuid="E8D12433F770464C87C957A12459838D" fieldPos="13" type="string"/>
 
@@ -490,11 +490,11 @@
 
 		<panel ____objectunic="true" isOpen="false" pathVisible="true">
 
-			<position ____objectunic="true" X="182" Y="9"/>
+			<position ____objectunic="true" X="54" Y="9"/>
 </panel>
 </extraProperties>
 
-	<attributes name="ID" kind="storage" scope="public" uuid="5529DB5836CA0E4CB54D14C0C3613E63" fieldPos="1" unique="true" autosequence="true" type="long" primKey="true"/>
+	<attributes name="ID" scope="public" uuid="E710EBE9FB06464F975C69A7EC5D6001" fieldPos="6" type="uuid" kind="storage" autogenerate="true" primKey="true" unique="true"/>
 
 	<attributes name="start_year" kind="storage" scope="public" uuid="1D7753D24E54374ABDC6AD5F6E44944A" fieldPos="2" type="date"/>
 
@@ -514,11 +514,11 @@
 
 		<panel ____objectunic="true" isOpen="false" pathVisible="true">
 
-			<position ____objectunic="true" X="319" Y="19"/>
+			<position ____objectunic="true" X="67" Y="57"/>
 </panel>
 </extraProperties>
 
-	<attributes name="ID" kind="storage" scope="public" uuid="D553D30A6B0DE7479A01DC20424BA306" fieldPos="1" unique="true" autosequence="true" type="long" primKey="true"/>
+	<attributes name="ID" scope="public" uuid="C764EBABBACA9E48A770EF1C27929EC7" fieldPos="5" type="uuid" kind="storage" autogenerate="true" primKey="true" unique="true"/>
 
 	<attributes name="url" kind="storage" scope="public" uuid="2F0509F9CBCFD548A1A015D06BB2112E" fieldPos="2" type="string"/>
 
@@ -534,11 +534,11 @@
 
 		<panel ____objectunic="true" isOpen="false" pathVisible="true">
 
-			<position ____objectunic="true" X="323" Y="19"/>
+			<position ____objectunic="true" X="89" Y="24"/>
 </panel>
 </extraProperties>
 
-	<attributes name="ID" kind="storage" scope="public" uuid="5ECB0C1837D1234FAF4D8DCAB0A80C9C" fieldPos="1" unique="true" autosequence="true" type="long" primKey="true"/>
+	<attributes name="ID" scope="public" uuid="28BCDA35B27C864B8B14C27ED37F1DD7" fieldPos="10" type="uuid" kind="storage" autogenerate="true" primKey="true" unique="true"/>
 
 	<attributes name="vote_date" kind="storage" scope="public" uuid="168E60CFA984D5428E4EE1931AFD1AC2" fieldPos="2" type="date"/>
 

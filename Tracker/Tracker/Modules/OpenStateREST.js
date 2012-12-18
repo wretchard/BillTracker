@@ -253,7 +253,15 @@ function ClearOpenStateData(arg) {
 		break;
 	case 'District':
 		var Table_List = ['District']
-		break				
+		break
+	case 'All':
+		var counter;
+		for (var vName in ds.dataClasses)  // put each datastore class of ds
+		{
+		counter=ds.dataClasses[vName];
+		counter.remove();
+		};	
+		break;				
 	default:
 		var Table_List = []	
 	}
@@ -495,7 +503,7 @@ function TestData(arg){
 //var x = RetrieveData(w).result;
 //var y = GetKeys(x[0]);
 //y;
-//ClearOpenStateData('Committee');
-TestData('District');
+ClearOpenStateData('All');
+//TestData('District');
 //RetrieveData("http://openstates.org/api/v1/bills/?q=agriculture&state=ca&chamber=upper&apikey=a7b283f866e94ff0a572ec269c76a32e");
 //RetrieveData("http://openstates.org/api/v1/bills/?q=agriculture&state=ca&chamber=upper&apikey=a7b283f866e94ff0a572ec269c76a32e");
