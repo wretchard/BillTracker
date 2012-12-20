@@ -477,7 +477,8 @@ function TestData(arg){
 		SaveBill(w);
 		break;
 	case 'Legislator':
-		v="http://openstates.org/api/v1/legislators/?state=ca&party=democratic&active=true&apikey=";
+		//v="http://openstates.org/api/v1/legislators/?state=tx&party=democratic&active=true&apikey=";
+		v="http://openstates.org/api/v1/legislators/?state=tx&active=true&apikey=";
 		w= v + require('openstates.api_key').openstates_api_key();
 		SaveLegislator(w);
 		break;
@@ -504,6 +505,6 @@ function TestData(arg){
 //var y = GetKeys(x[0]);
 //y;
 ClearOpenStateData('All');
-//TestData('District');
+TestData('Legislator');
 //RetrieveData("http://openstates.org/api/v1/bills/?q=agriculture&state=ca&chamber=upper&apikey=a7b283f866e94ff0a572ec269c76a32e");
 //RetrieveData("http://openstates.org/api/v1/bills/?q=agriculture&state=ca&chamber=upper&apikey=a7b283f866e94ff0a572ec269c76a32e");
