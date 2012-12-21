@@ -290,6 +290,14 @@ function GetKeys(obj) {
 
 function SaveLegislator(varURL) {
 	var result=RetrieveData(varURL).result;
+	var house="";
+	if (varURL.indexOf('chamber=upper')>0) {
+	house='upper';
+	} else if (varURL.indexOf('chamber=lower')>0)
+	{
+	house='lower';
+	}
+
 	for (var t in result)
 	{
 	//look for existing record
@@ -310,7 +318,12 @@ function SaveLegislator(varURL) {
 	TheLegislator.active=result[t].active;
 	TheLegislator.photo_url=result[t].photo_url;
 	TheLegislator.created_at=result[t].created_at;
+	if (result[t].chamber){
 	TheLegislator.chamber=result[t].chamber;
+		}
+	else {
+		TheLegislator.chamber=house;
+		}
 	TheLegislator.suffixes=result[t].suffixes;
 	TheLegislator.save();		
 	
@@ -473,14 +486,17 @@ function TestData(arg){
 		break;
 	case 'Bill':
 		//v="http://openstates.org/api/v1/bills/?q=agriculture&state=tx&chamber=upper&apikey=";
-		v="http://openstates.org/api/v1/bills/?state=tx&chamber=upper&apikey=";
+		v="http://openstates.org/api/v1/bills/?state=tx&chamber=lower&bill_id__in=HB 5&apikey=";
 		w= v + require('openstates.api_key').openstates_api_key();
 		SaveBill(w);
 		break;
 	case 'Legislator':
 		//v="http://openstates.org/api/v1/legislators/?state=tx&party=democratic&active=true&apikey=";
-		v="http://openstates.org/api/v1/legislators/?state=tx&active=true&apikey=";
-		w= v + require('openstates.api_key').openstates_api_key();
+		v="http://openstates.org/api/v1/legislators/?state=tx&active=true&chamber=upper";
+		w= v + "&apikey=" + require('openstates.api_key').openstates_api_key();
+		SaveLegislator(w);
+		v="http://openstates.org/api/v1/legislators/?state=tx&active=true&chamber=lower";
+		w= v + "&apikey=" + require('openstates.api_key').openstates_api_key();
 		SaveLegislator(w);
 		break;
 	case 'Committee':
@@ -505,7 +521,7 @@ function TestData(arg){
 //var x = RetrieveData(w).result;
 //var y = GetKeys(x[0]);
 //y;
-ClearOpenStateData('Bill');
-TestData('Bill');
+//ClearOpenStateData('All');
+TestData('Legislator');
 //RetrieveData("http://openstates.org/api/v1/bills/?q=agriculture&state=ca&chamber=upper&apikey=a7b283f866e94ff0a572ec269c76a32e");
 //RetrieveData("http://openstates.org/api/v1/bills/?q=agriculture&state=ca&chamber=upper&apikey=a7b283f866e94ff0a572ec269c76a32e");
