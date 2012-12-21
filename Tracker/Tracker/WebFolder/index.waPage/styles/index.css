@@ -7,7 +7,7 @@
 	 height: 500px;
 	 top: 4px;
 	 left: -5px;
-	 right: 17px;
+	 right: 16px;
 	
 	 position: absolute;
 	 
@@ -38,7 +38,7 @@
 	 top: 28px;
 	 bottom: 5px;
 	 left: 5px;
-	 right: 5px;
+	 right: -275px;
 	
 	 position: absolute;
 	 
@@ -48,7 +48,7 @@
 	 top: 28px;
 	 bottom: 5px;
 	 left: 5px;
-	 right: 5px;
+	 right: -275px;
 	
 	 position: absolute;
 	 
@@ -58,7 +58,7 @@
 	 top: 28px;
 	 bottom: 5px;
 	 left: 5px;
-	 right: 5px;
+	 right: -275px;
 	
 	 position: absolute;
 	 
@@ -129,6 +129,16 @@
 	 bottom: -465px;
 	 left: 0px;
 	 right: -212px;
+	
+	 position: absolute;
+	 
+}
+
+#tabView_Tracker #container7 #component1 {
+	 top: 0px;
+	 bottom: 0px;
+	 left: 0px;
+	 right: 0px;
 	
 	 position: absolute;
 	 

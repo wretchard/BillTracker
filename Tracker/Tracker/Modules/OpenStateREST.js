@@ -472,7 +472,8 @@ function TestData(arg){
 		}	
 		break;
 	case 'Bill':
-		v="http://openstates.org/api/v1/bills/?q=agriculture&state=tx&chamber=upper&apikey=";
+		//v="http://openstates.org/api/v1/bills/?q=agriculture&state=tx&chamber=upper&apikey=";
+		v="http://openstates.org/api/v1/bills/?state=tx&chamber=upper&apikey=";
 		w= v + require('openstates.api_key').openstates_api_key();
 		SaveBill(w);
 		break;
@@ -504,7 +505,7 @@ function TestData(arg){
 //var x = RetrieveData(w).result;
 //var y = GetKeys(x[0]);
 //y;
-ClearOpenStateData('All');
-TestData('Legislator');
+ClearOpenStateData('Bill');
+TestData('Bill');
 //RetrieveData("http://openstates.org/api/v1/bills/?q=agriculture&state=ca&chamber=upper&apikey=a7b283f866e94ff0a572ec269c76a32e");
 //RetrieveData("http://openstates.org/api/v1/bills/?q=agriculture&state=ca&chamber=upper&apikey=a7b283f866e94ff0a572ec269c76a32e");
